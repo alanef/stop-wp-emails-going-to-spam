@@ -37,8 +37,13 @@ class Admin_Settings extends Admin_Pages {
 
 
 		$this->settings_title = esc_html__( 'Stop WP Emails Going to Spam', 'stop-wp-emails-going-to-spam' );
-		$this->donation = new PluginDonation('stop-wp-emails-going-to-spam','settings_page_stop-wp-emails-going-to-spam-settings', 'stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php');
-
+		$this->donation       = new PluginDonation(
+			'stop-wp-emails-going-to-spam',
+			'settings_page_stop-wp-emails-going-to-spam-settings',
+			'stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
+			admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
+			$this->settings_title
+		);
 		parent::__construct();
 	}
 
