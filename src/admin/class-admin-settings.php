@@ -20,7 +20,7 @@ class Admin_Settings extends Admin_Pages {
 	protected $settings_title;
 	protected $domain;
 	protected $options;
-    protected $donations;
+	protected $donations;
 
 	/**
 	 * Settings constructor.
@@ -44,6 +44,8 @@ class Admin_Settings extends Admin_Pages {
 			admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
 			$this->settings_title
 		);
+		add_filter( 'plugindonation_lib_strings', array( $this, 'set_strings' ) );
+
 		parent::__construct();
 	}
 
@@ -73,7 +75,6 @@ class Admin_Settings extends Admin_Pages {
 		);
 
 	}
-
 
 	public function delete_options() {
 		update_option( 'stop-wp-emails-going-to-spam-settings-1', self::option_defaults( 'stop-wp-emails-going-to-spam-settings-1' ) );
@@ -132,7 +133,7 @@ class Admin_Settings extends Admin_Pages {
 		?>
         <table class="form-table">
             <tbody>
-            <?php $this->donation->display(); ?>
+			<?php $this->donation->display(); ?>
             <tr valign="top">
                 <th scope="row"><?php _e( 'About this Plugin', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
@@ -390,7 +391,6 @@ class Admin_Settings extends Admin_Pages {
 		return $settings;
 	}
 
-
 	public function meta_box_2() {
 		if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 			$ip = $_SERVER['SERVER_ADDR'];
@@ -413,7 +413,7 @@ class Admin_Settings extends Admin_Pages {
 			$domain = $this->domain;
 		}
 		$blacklist = false;
-        $ip='5.134.11.92';
+		$ip        = '5.134.11.92';
 		if ( $ip4 ) {
 			$rbl    = 'zen.spamhaus.org';
 			$rev    = array_reverse( explode( '.', $ip ) );
@@ -459,12 +459,14 @@ class Admin_Settings extends Admin_Pages {
                         <p class="notice notice-error"><?php esc_html_e( 'Cannot identify a valid IP address - you may want to check with your hosting company', 'stop-wp-emails-going-to-spam' ); ?></p>
 						<?php
 					}
-                    if ( $blacklist ) {
-	                    ?>
+					if ( $blacklist ) {
+						?>
                         <p class="notice notice-error"><?php esc_html_e( 'Your IP appears in one or more spam blacklists', 'stop-wp-emails-going-to-spam' ); ?>
-                            &nbsp;<span style="background-color: black; color: white; padding: 8px;"><?php esc_html_e( 'spam blacklists', 'stop-wp-emails-going-to-spam' ); ?></span>&nbsp;<?php esc_html_e( 'you may want to talk to your host to resolve your IP reputation', 'stop-wp-emails-going-to-spam' ); ?></p>
-	                    <?php
-                    }
+                            &nbsp;<span
+                                    style="background-color: black; color: white; padding: 8px;"><?php esc_html_e( 'spam blacklists', 'stop-wp-emails-going-to-spam' ); ?></span>&nbsp;<?php esc_html_e( 'you may want to talk to your host to resolve your IP reputation', 'stop-wp-emails-going-to-spam' ); ?>
+                        </p>
+						<?php
+					}
 					?>
                 </td>
             </tr>
@@ -538,6 +540,85 @@ class Admin_Settings extends Admin_Pages {
             </tbody>
         </table>
 		<?php
+	}
+
+	public function set_strings( $strings ) {
+		$strings = array(
+			esc_html__( 'Gift a Donation', 'stop-wp-emails-going-to-spal' ),
+			// 0
+			esc_html__( 'Hi, I\'m Alan and I built this free plugin to solve problems I had, and I hope it solves your problem too.', 'stop-wp-emails-going-to-spal' ),
+			// 1
+			esc_html__( 'It would really help me know that others find it useful and a great way of doing this is to gift me a small donation', 'stop-wp-emails-going-to-spal' ),
+			// 2
+			esc_html__( 'Gift a donation: select your desired option', 'stop-wp-emails-going-to-spal' ),
+			// 3
+			esc_html__( 'My Bitcoin donation wallet', 'stop-wp-emails-going-to-spal' ),
+			// 4
+			esc_html__( 'Gift a donation via PayPal', 'stop-wp-emails-going-to-spal' ),
+			// 5
+			esc_html__( 'My Bitcoin Cash address', 'stop-wp-emails-going-to-spal' ),
+			// 6
+			esc_html__( 'My Ethereum address', 'stop-wp-emails-going-to-spal' ),
+			// 7
+			esc_html__( 'My Dogecoin address', 'stop-wp-emails-going-to-spal' ),
+			// 8
+			esc_html__( 'Contribute', 'stop-wp-emails-going-to-spal' ),
+			// 9
+			esc_html__( 'Contribute to the Open Source Project in other ways', 'stop-wp-emails-going-to-spal' ),
+			// 10
+			esc_html__( 'Submit a review', 'stop-wp-emails-going-to-spal' ),
+			// 11
+			esc_html__( 'Translate to your language', 'stop-wp-emails-going-to-spal' ),
+			// 12
+			esc_html__( 'SUBMIT A REVIEW', 'stop-wp-emails-going-to-spal' ),
+			// 13
+			esc_html__( 'If you are happy with the plugin then we would love a review. Even if you are not so happy feedback is always useful, but if you have issues we would love you to make a support request first so we can try and help.', 'stop-wp-emails-going-to-spal' ),
+			// 14
+			esc_html__( 'SUPPORT FORUM', 'stop-wp-emails-going-to-spal' ),
+			// 15
+			esc_html__( 'Providing some translations for a plugin is very easy and can be done via the WordPress system. You can easily contribute to the community and you don\'t need to translate it all.', 'stop-wp-emails-going-to-spal' ),
+			// 16
+			esc_html__( 'TRANSLATE INTO YOUR LANGUAGE', 'stop-wp-emails-going-to-spal' ),
+			// 17
+			esc_html__( 'As an open source project you are welcome to contribute to the development of the software if you can. The development plugin is hosted on GitHub.', 'stop-wp-emails-going-to-spal' ),
+			// 18
+			esc_html__( 'CONTRIBUTE ON GITHUB', 'stop-wp-emails-going-to-spal' ),
+			// 19
+			esc_html__( 'Get Support', 'stop-wp-emails-going-to-spal' ),
+			// 20
+			esc_html__( 'WordPress SUPPORT FORUM', 'stop-wp-emails-going-to-spal' ),
+			// 21
+			esc_html__( 'Hi I\'m Alan and I support the free plugin', 'plugin-dontaion-lib' ),
+			// 22
+			esc_html__( 'for you.  You have been using the plugin for a while now and WordPress has probably been through several updates by now. So I\'m asking if you can help keep this plugin free, by donating a very small amount of cash. If you can that would be a fantastic help to keeping this plugin updated.', 'plugin-donate-lib' ),
+			// 23
+			esc_html__( 'Donate via this page', 'plugin-donate-lib' ),
+			// 24
+			esc_html__( 'Remind me later', 'plugin-donate-lib' ),
+			// 25
+			esc_html__( 'I have already donated', 'plugin-donate-lib' ),
+			// 26
+			esc_html__( 'I don\'t want to donate, dismiss this notice permanently', 'plugin-donate-lib' ),
+			// 27
+			esc_html__( 'Hi I\'m Alan and you have been using this plugin', 'plugin-dontaion-lib' ),
+			// 28
+			esc_html__( 'for a while - that is awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress? Just to help spread the word and boost my motivation..', 'plugin-donate-lib' ),
+			// 29
+			esc_html__( 'OK, you deserve it', 'plugin-donate-lib' ),
+			// 30
+			esc_html__( 'Maybe later', 'plugin-donate-lib' ),
+			// 31
+			esc_html__( 'Already done', 'plugin-donate-lib' ),
+			// 32
+			esc_html__( 'No thanks, dismiss this request', 'plugin-donate-lib' ),
+			// 33
+			esc_html__( 'Donate to Support', 'plugin-donate-lib' ),
+			// 34
+			esc_html__( 'Settings', 'plugin-donate-lib' ),
+			// 35
+		);
+
+		return $strings;
 	}
 
 
