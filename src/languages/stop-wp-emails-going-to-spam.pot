@@ -249,11 +249,11 @@ msgstr ""
 msgid "%1$sCannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool%2$s"
 msgstr ""
 
-#: src/admin/class-admin.php:63
+#: src/admin/class-admin.php:63, src/includes/vendor/alanef/plugindonation_lib/PluginDonation.php:113
 msgid "Settings"
 msgstr ""
 
-#: src/admin/class-admin.php:76
+#: src/admin/class-admin.php:76, src/includes/vendor/alanef/plugindonation_lib/PluginDonation.php:126
 msgid "Donate to Support"
 msgstr ""
 

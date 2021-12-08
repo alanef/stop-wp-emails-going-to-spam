@@ -53,6 +53,9 @@ Once activated you will be taken to the settings page.  The default settings are
 This plugin is provided for free and any support is totally voluntary.
 
 == Changelog ==
+= 2.0.2 =
+* stop settings link showing twice
+
 = 2.0.1 =
 * Improve donation process
 

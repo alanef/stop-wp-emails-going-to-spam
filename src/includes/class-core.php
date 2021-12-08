@@ -149,16 +149,6 @@ class Core {
 		$this->loader->add_action( 'wp_mail_from', $plugin_admin, 'wp_mail_from' );
 		$this->loader->add_action( 'wp_mail_from_name', $plugin_admin, 'wp_mail_from_name' );
 		add_action( 'init', array( $plugin_admin, 'redirect_to_settings' ) );
-		add_filter(
-			'plugin_action_links_stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
-			array(
-				$plugin_admin,
-				'settings_link',
-			)
-		);
-		add_filter( 'plugin_row_meta', array( $plugin_admin, 'plugin_meta' ), 10, 2 );
-
-
 	}
 
 	/**
