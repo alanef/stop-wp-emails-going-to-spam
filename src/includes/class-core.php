@@ -14,7 +14,6 @@
 
 namespace Stop_Wp_Emails_Going_To_Spam\Includes;
 
-use AlanEFPluginDonation\PluginDonation;
 use Stop_Wp_Emails_Going_To_Spam\Admin\Admin;
 use Stop_Wp_Emails_Going_To_Spam\Admin\Admin_Settings;
 
