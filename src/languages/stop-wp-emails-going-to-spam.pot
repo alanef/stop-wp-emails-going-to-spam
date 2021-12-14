@@ -37,307 +37,359 @@ msgstr ""
 msgid "Stop WP Emails Going to Spam"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:106
+#: src/admin/class-admin-settings.php:107
 msgid "Information"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:114
+#: src/admin/class-admin-settings.php:115
 msgid "Sending Health Check"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:122
+#: src/admin/class-admin-settings.php:123
 msgid "Envelope Sender"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:138
+#: src/admin/class-admin-settings.php:139
 msgid "About this Plugin"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:141
+#: src/admin/class-admin-settings.php:142
 msgid "This plugin tries to help you stop emails being sent to spam folders when sent from your WordPress website."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:144
+#: src/admin/class-admin-settings.php:145
 msgid "When using the default PHP mailer on shared hosts WordPress does not correctly set the \"envelope sender\"."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:147
+#: src/admin/class-admin-settings.php:148
 msgid "Use the settings to select the email that you want as the \"envelope sender\"."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:150
+#: src/admin/class-admin-settings.php:151
 msgid "For best results the \"envelope sender\" domain should have a SPF record, see the SPF section, and the email address should exist."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:153
+#: src/admin/class-admin-settings.php:154
 msgid "This plugin will only set the \"envelope sender\" if other plugins have not."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:157
+#: src/admin/class-admin-settings.php:158
 msgid "You do not need this plugin if you are using an SMTP email plugin or using an API based / transactional email solution"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:163
+#: src/admin/class-admin-settings.php:164
 msgid "Got a problem with inbound spam?"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:166
+#: src/admin/class-admin-settings.php:167
 msgid "If you want to block incoming comment spam, try this sister anti comment spam plugin - it is free."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:170
+#: src/admin/class-admin-settings.php:171
 msgid "FREE ANTI COMMENT SPAM"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:173
+#: src/admin/class-admin-settings.php:174
 msgid "If your inbound spam is more serious and you need to stop spam on CF7, Gravity Forms, Wp Forms, WooCommerce, Registrations and more, grab a 14 day trial of my plugin, nothing to lose except spam."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:178
+#: src/admin/class-admin-settings.php:179
 msgid "14 DAY TRIAL - ANTI SPAM"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:180
+#: src/admin/class-admin-settings.php:181
 msgid "Anti Spam product details"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:192
+#: src/admin/class-admin-settings.php:193
 msgid "This sets envelope sender of the message, if not set by another program. This will usually be turned into a Return-Path header by the receiver, and is the address that bounces will be sent to."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:197
+#: src/admin/class-admin-settings.php:198
 msgid "Use Admin Email"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:208
+#: src/admin/class-admin-settings.php:209
 msgid "Use another Domain email"
 msgstr ""
 
 #. translators:  leave the @%s  as in noreply@%s
-#: src/admin/class-admin-settings.php:226
+#: src/admin/class-admin-settings.php:227
 msgid "You can use an email like noreply@%s, but make sure the email account exists."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:240
+#: src/admin/class-admin-settings.php:241
 msgid "Use another email"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:254
+#: src/admin/class-admin-settings.php:255
 msgid "You can use another fully qualified email, but make sure the email account exists and the domain has correct SPF set up. No point using gmail or outlook or domains you don't own as you will never make it work"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:259
+#: src/admin/class-admin-settings.php:260
 msgid "From Address"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:262
+#: src/admin/class-admin-settings.php:263
 msgid "Set the relationship between From address and Envelope address"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:269
+#: src/admin/class-admin-settings.php:270
 msgid "Tick to set the From to the same as Envelope (above) recommended"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:276
+#: src/admin/class-admin-settings.php:277
 msgid "Tick to set the Envelope to the From, not recommended unless all your forms use a From address of your domain, however the SPF check below is ignored"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:283
+#: src/admin/class-admin-settings.php:284
 msgid "Tick to leave the From address alone - this may raise warnings in email clients when different from Envelope, not generally recommended"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:288
+#: src/admin/class-admin-settings.php:289
 msgid "WordPress default mail address"
 msgstr ""
 
 #. translators:  leave &lt;wordpress@%s&gt;
-#: src/admin/class-admin-settings.php:294
+#: src/admin/class-admin-settings.php:295
 msgid "WordPress default system messages come from an account WordPress &lt;wordpress@%s&gt;  you can control that with the following settings"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:303
+#: src/admin/class-admin-settings.php:304
 msgid "Tick to set the WP default to the same as the email set above - recommended"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:317
+#: src/admin/class-admin-settings.php:318
 msgid "Tick and set an email name on your domain for the default email"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:322
+#: src/admin/class-admin-settings.php:323
 msgid "WordPress default name"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:330
+#: src/admin/class-admin-settings.php:331
 msgid "You can change the display name associated with the default WordPress email, this is cosmetic only"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:354, src/admin/class-admin-settings.php:360
+#: src/admin/class-admin-settings.php:355, src/admin/class-admin-settings.php:361
 msgid "Invalid email for Envelope"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:370
+#: src/admin/class-admin-settings.php:371
 msgid "Invalid email for WordPress default"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:444
+#: src/admin/class-admin-settings.php:445
 msgid ""
 msgstr ""
 
-#: src/admin/class-admin-settings.php:450
+#: src/admin/class-admin-settings.php:451
 msgid "Server Info"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:459
+#: src/admin/class-admin-settings.php:460
 msgid "Cannot identify a valid IP address - you may want to check with your hosting company"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:455
+#: src/admin/class-admin-settings.php:456
 msgid "IPv4"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:455
+#: src/admin/class-admin-settings.php:456
 msgid "IPv6"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:464
+#: src/admin/class-admin-settings.php:465
 msgid "Your IP appears in one or more spam blacklists"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:466
+#: src/admin/class-admin-settings.php:467
 msgid "spam blacklists"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:466
+#: src/admin/class-admin-settings.php:467
 msgid "you may want to talk to your host to resolve your IP reputation"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:474
+#: src/admin/class-admin-settings.php:475
 msgid "Domain being checked"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:480
+#: src/admin/class-admin-settings.php:481
 msgid "SPF Record"
 msgstr ""
 
 #. translators:  leave placeholders 'Current record SPF record for domain_name: <strong>spf_record</strong>'
-#: src/admin/class-admin-settings.php:506
+#: src/admin/class-admin-settings.php:507
 msgid "Current record SPF record for %1$s: %2$s%3$s%4$s"
 msgstr ""
 
 #. translators:  leave placeholders - they are just html <p> tags  with styling classes
-#: src/admin/class-admin-settings.php:531
+#: src/admin/class-admin-settings.php:532
 msgid "%1$sRecommend you add +a to your SPF record%4$s"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:525
+#: src/admin/class-admin-settings.php:526
 msgid "%1$sGood!, this contains an A record reference%2$s"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:519
+#: src/admin/class-admin-settings.php:520
 msgid "%1$sGood!, this contains your server IP address%2$s"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:513
+#: src/admin/class-admin-settings.php:514
 msgid "%1$sThe SPF redirects to another domain, recommend you manually check the redirected SPF%2$s"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:491
+#: src/admin/class-admin-settings.php:492
 msgid "%1$sNo SPF record found for %2$s, the following SPF record is recommended"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:484
+#: src/admin/class-admin-settings.php:485
 msgid "%1$sCannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool%2$s"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:547
+#: src/admin/class-admin-settings.php:548
 msgid "Gift a Donation"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:549
+#: src/admin/class-admin-settings.php:550
 msgid "Hi, I'm Alan and I built this free plugin to solve problems I had, and I hope it solves your problem too."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:551
+#: src/admin/class-admin-settings.php:552
 msgid "It would really help me know that others find it useful and a great way of doing this is to gift me a small donation"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:553
+#: src/admin/class-admin-settings.php:554
 msgid "Gift a donation: select your desired option"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:555
+#: src/admin/class-admin-settings.php:556
 msgid "My Bitcoin donation wallet"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:557
+#: src/admin/class-admin-settings.php:558
 msgid "Gift a donation via PayPal"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:559
+#: src/admin/class-admin-settings.php:560
 msgid "My Bitcoin Cash address"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:561
+#: src/admin/class-admin-settings.php:562
 msgid "My Ethereum address"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:563
+#: src/admin/class-admin-settings.php:564
 msgid "My Dogecoin address"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:565
+#: src/admin/class-admin-settings.php:566
 msgid "Contribute"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:567
+#: src/admin/class-admin-settings.php:568
 msgid "Contribute to the Open Source Project in other ways"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:569
+#: src/admin/class-admin-settings.php:570
 msgid "Submit a review"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:571
+#: src/admin/class-admin-settings.php:572
 msgid "Translate to your language"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:573
+#: src/admin/class-admin-settings.php:574
 msgid "SUBMIT A REVIEW"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:575
+#: src/admin/class-admin-settings.php:576
 msgid "If you are happy with the plugin then we would love a review. Even if you are not so happy feedback is always useful, but if you have issues we would love you to make a support request first so we can try and help."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:577
+#: src/admin/class-admin-settings.php:578
 msgid "SUPPORT FORUM"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:579
+#: src/admin/class-admin-settings.php:580
 msgid "Providing some translations for a plugin is very easy and can be done via the WordPress system. You can easily contribute to the community and you don't need to translate it all."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:581
+#: src/admin/class-admin-settings.php:582
 msgid "TRANSLATE INTO YOUR LANGUAGE"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:583
+#: src/admin/class-admin-settings.php:584
 msgid "As an open source project you are welcome to contribute to the development of the software if you can. The development plugin is hosted on GitHub."
 msgstr ""
 
-#: src/admin/class-admin-settings.php:585
+#: src/admin/class-admin-settings.php:586
 msgid "CONTRIBUTE ON GITHUB"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:587
+#: src/admin/class-admin-settings.php:588
 msgid "Get Support"
 msgstr ""
 
-#: src/admin/class-admin-settings.php:589
+#: src/admin/class-admin-settings.php:590
 msgid "WordPress SUPPORT FORUM"
 msgstr ""
 
-#: src/admin/class-admin.php:53
+#: src/admin/class-admin-settings.php:592
+msgid "Hi I'm Alan and I support the free plugin"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:594
+msgid "for you.  You have been using the plugin for a while now and WordPress has probably been through several updates by now. So I'm asking if you can help keep this plugin free, by donating a very small amount of cash. If you can that would be a fantastic help to keeping this plugin updated."
+msgstr ""
+
+#: src/admin/class-admin-settings.php:596
+msgid "Donate via this page"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:598
+msgid "Remind me later"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:600
+msgid "I have already donated"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:602
+msgid "I don't want to donate, dismiss this notice permanently"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:604
+msgid "Hi I'm Alan and you have been using this plugin"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:606
+msgid "for a while - that is awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress? Just to help spread the word and boost my motivation.."
+msgstr ""
+
+#: src/admin/class-admin-settings.php:608
+msgid "OK, you deserve it"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:610
+msgid "Maybe later"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:612
+msgid "Already done"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:614
+msgid "No thanks, dismiss this request"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:616
+msgid "Donate to Support"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:618, src/admin/class-admin.php:53
 msgid "Settings"
 msgstr ""
 
