@@ -27,7 +27,6 @@ class Activator {
 	 * @since    2.0.0
 	 */
 	public static function activate() {
-		add_option('stop-wp-emails-going-to-spam-activate', true);
 	}
 
 }

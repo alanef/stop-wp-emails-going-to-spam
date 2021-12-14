@@ -33,6 +33,7 @@ class i18n {
 	 */
 	public function load_plugin_textdomain() {
 
+
 		load_plugin_textdomain(
 			'stop-wp-emails-going-to-spam',
 			false,

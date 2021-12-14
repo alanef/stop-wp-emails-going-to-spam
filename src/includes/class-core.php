@@ -147,7 +147,6 @@ class Core {
 		$this->loader->add_action( 'phpmailer_init', $plugin_admin, 'set_envelope_sender' );
 		$this->loader->add_action( 'wp_mail_from', $plugin_admin, 'wp_mail_from' );
 		$this->loader->add_action( 'wp_mail_from_name', $plugin_admin, 'wp_mail_from_name' );
-		add_action( 'init', array( $plugin_admin, 'redirect_to_settings' ) );
 	}
 
 	/**

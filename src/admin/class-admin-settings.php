@@ -44,7 +44,8 @@ class Admin_Settings extends Admin_Pages {
 			admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
 			$this->settings_title
 		);
-		add_filter( 'plugindonation_lib_strings', array( $this, 'set_strings' ) );
+
+        add_filter( 'plugindonation_lib_strings', array( $this, 'set_strings' ) );
 
 		parent::__construct();
 	}
@@ -588,33 +589,33 @@ class Admin_Settings extends Admin_Pages {
 			// 20
 			esc_html__( 'WordPress SUPPORT FORUM', 'stop-wp-emails-going-to-spam' ),
 			// 21
-			esc_html__( 'Hi I\'m Alan and I support the free plugin', 'plugin-dontaion-lib' ),
+			esc_html__( 'Hi I\'m Alan and I support the free plugin', 'stop-wp-emails-going-to-spam' ),
 			// 22
-			esc_html__( 'for you.  You have been using the plugin for a while now and WordPress has probably been through several updates by now. So I\'m asking if you can help keep this plugin free, by donating a very small amount of cash. If you can that would be a fantastic help to keeping this plugin updated.', 'plugin-donate-lib' ),
+			esc_html__( 'for you.  You have been using the plugin for a while now and WordPress has probably been through several updates by now. So I\'m asking if you can help keep this plugin free, by donating a very small amount of cash. If you can that would be a fantastic help to keeping this plugin updated.', 'stop-wp-emails-going-to-spam' ),
 			// 23
-			esc_html__( 'Donate via this page', 'plugin-donate-lib' ),
+			esc_html__( 'Donate via this page', 'stop-wp-emails-going-to-spam' ),
 			// 24
-			esc_html__( 'Remind me later', 'plugin-donate-lib' ),
+			esc_html__( 'Remind me later', 'stop-wp-emails-going-to-spam' ),
 			// 25
-			esc_html__( 'I have already donated', 'plugin-donate-lib' ),
+			esc_html__( 'I have already donated', 'stop-wp-emails-going-to-spam' ),
 			// 26
-			esc_html__( 'I don\'t want to donate, dismiss this notice permanently', 'plugin-donate-lib' ),
+			esc_html__( 'I don\'t want to donate, dismiss this notice permanently', 'stop-wp-emails-going-to-spam' ),
 			// 27
-			esc_html__( 'Hi I\'m Alan and you have been using this plugin', 'plugin-dontaion-lib' ),
+			esc_html__( 'Hi I\'m Alan and you have been using this plugin', 'stop-wp-emails-going-to-spam' ),
 			// 28
-			esc_html__( 'for a while - that is awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress? Just to help spread the word and boost my motivation..', 'plugin-donate-lib' ),
+			esc_html__( 'for a while - that is awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress? Just to help spread the word and boost my motivation..', 'stop-wp-emails-going-to-spam' ),
 			// 29
-			esc_html__( 'OK, you deserve it', 'plugin-donate-lib' ),
+			esc_html__( 'OK, you deserve it', 'stop-wp-emails-going-to-spam' ),
 			// 30
-			esc_html__( 'Maybe later', 'plugin-donate-lib' ),
+			esc_html__( 'Maybe later', 'stop-wp-emails-going-to-spam' ),
 			// 31
-			esc_html__( 'Already done', 'plugin-donate-lib' ),
+			esc_html__( 'Already done', 'stop-wp-emails-going-to-spam' ),
 			// 32
-			esc_html__( 'No thanks, dismiss this request', 'plugin-donate-lib' ),
+			esc_html__( 'No thanks, dismiss this request', 'stop-wp-emails-going-to-spam' ),
 			// 33
-			esc_html__( 'Donate to Support', 'plugin-donate-lib' ),
+			esc_html__( 'Donate to Support', 'stop-wp-emails-going-to-spam' ),
 			// 34
-			esc_html__( 'Settings', 'plugin-donate-lib' ),
+			esc_html__( 'Settings', 'stop-wp-emails-going-to-spam' ),
 			// 35
 		);
 

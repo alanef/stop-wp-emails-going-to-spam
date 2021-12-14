@@ -17,7 +17,6 @@ class Uninstall {
 	 */
 	public static function uninstall() {
         delete_option('stop-wp-emails-going-to-spam-settings-1');
-		delete_option('stop-wp-emails-going-to-spam-activate');
 	}
 
 }

@@ -48,16 +48,6 @@ class Admin {
 
 	}
 
-	public function redirect_to_settings() {
-		if ( get_option( 'stop-wp-emails-going-to-spam-activate', false ) ) {
-			delete_option( 'stop-wp-emails-going-to-spam-activate' );
-			if ( ! isset( $_GET['activate-multi'] ) ) {
-				wp_safe_redirect( admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ) );
-				exit;
-			}
-		}
-	}
-
 	public function settings_link( $links ) {
 		$url           = admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' );
 		$settings_link = '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Settings', 'stop-wp-emails-going-to-spam' ) . '</a>';
@@ -65,19 +55,6 @@ class Admin {
 			$links,
 			$settings_link
 		);
-
-		return $links;
-	}
-
-	function plugin_meta( $links, $file ) {
-
-		if ( strpos( $file, 'stop-wp-emails-going-to-spam.php' ) !== false ) {
-			$new_links = array(
-				'<a href="https://www.paypal.com/donate/?hosted_button_id=ZG4NGLJSYX9SC" target="_blank">' . esc_html__( 'Donate to Support', 'stop-wp-emails-going-to-spam' ) . '</a>'
-			);
-
-			$links = array_merge( $links, $new_links );
-		}
 
 		return $links;
 	}
