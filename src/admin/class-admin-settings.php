@@ -617,6 +617,8 @@ class Admin_Settings extends Admin_Pages {
 			// 34
 			esc_html__( 'Settings', 'stop-wp-emails-going-to-spam' ),
 			// 35
+			esc_html__( 'Help Develop', 'stop-wp-emails-going-to-spam' ),
+			// 36
 		);
 
 		return $strings;
