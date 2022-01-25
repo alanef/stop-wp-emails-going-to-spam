@@ -15,7 +15,7 @@
  * Plugin Name:       Stop WP Emails Going to Spam
  * Plugin URI:        http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/
  * Description:       When using PHP mail - WordPress generated emails often go to spam, this plugin gives you some simple tools to help stop that
- * Version:           2.0.2
+ * Version:           2.0.3
  * Author:            Alan Fuller
  * Author URI:        http://fullworks.net/
  * License:           GPL-3.0+

@@ -2,8 +2,8 @@
 Contributors: alanfuller, fullworks
 Donate Link: https://www.paypal.com/donate/?hosted_button_id=UGRBY5CHSD53Q
 Tags: email, spam, envelope sender, phpmail, phpmailer
-Tested up to: 5.8
-Stable tag: 2.0.2
+Tested up to: 5.9
+Stable tag: 2.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,6 +53,9 @@ Once activated you will be taken to the settings page.  The default settings are
 This plugin is provided for free and any support is totally voluntary.
 
 == Changelog ==
+= 2.0.3 =
+* update donation library
+
 = 2.0.2 =
 * stop settings link showing twice
 

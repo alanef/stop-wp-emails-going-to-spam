@@ -1,4 +1,4 @@
-# Copyright (C) 2021 stop-wp-emails-going-to-spam
+# Copyright (C) 2022 stop-wp-emails-going-to-spam
 # This file is distributed under the same license as the stop-wp-emails-going-to-spam package.
 msgid ""
 msgstr ""
@@ -391,6 +391,10 @@ msgstr ""
 
 #: src/admin/class-admin-settings.php:618, src/admin/class-admin.php:53
 msgid "Settings"
+msgstr ""
+
+#: src/admin/class-admin-settings.php:620
+msgid "Help Develop"
 msgstr ""
 
 #: src/includes/autoloader.php:62

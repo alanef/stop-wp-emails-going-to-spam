@@ -45,7 +45,7 @@ class Admin_Settings extends Admin_Pages {
 			$this->settings_title
 		);
 
-        add_filter( 'plugindonation_lib_strings', array( $this, 'set_strings' ) );
+        add_filter( 'plugindonation_lib_strings_stop-wp-emails-going-to-spam', array( $this, 'set_strings' ) );
 
 		parent::__construct();
 	}
