@@ -2,8 +2,8 @@
 Contributors: alanfuller, fullworks
 Donate Link: https://www.buymeacoffee.com/wpdevalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
-Tested up to: 6.0
-Stable tag: 2.0.4
+Tested up to: 6.1
+Stable tag: 2.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,6 +53,9 @@ Once activated you will be taken to the settings page.  The default settings are
 This plugin is provided for free and any support is totally voluntary.
 
 == Changelog ==
+= 2.0.5 =
+* Correct server IP detection
+
 = 2.0.4 =
 * add buy me a coffee donation option
 

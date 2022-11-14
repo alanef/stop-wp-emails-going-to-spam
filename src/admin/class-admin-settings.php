@@ -45,7 +45,7 @@ class Admin_Settings extends Admin_Pages {
 			$this->settings_title
 		);
 
-        add_filter( 'plugindonation_lib_strings_stop-wp-emails-going-to-spam', array( $this, 'set_strings' ) );
+		add_filter( 'plugindonation_lib_strings_stop-wp-emails-going-to-spam', array( $this, 'set_strings' ) );
 
 		parent::__construct();
 	}
@@ -414,7 +414,6 @@ class Admin_Settings extends Admin_Pages {
 			$domain = $this->domain;
 		}
 		$blacklist = false;
-		$ip        = '5.134.11.92';
 		if ( $ip4 ) {
 			$rbl    = 'zen.spamhaus.org';
 			$rev    = array_reverse( explode( '.', $ip ) );
@@ -536,7 +535,9 @@ class Admin_Settings extends Admin_Pages {
 						}
 					}
 					?>
-                </td>
+                    <p>
+						<?php esc_html_e( 'Note about ~all.  ~all is a soft fail and is normally used,  however some services relay emails and O365 does not like it if the originating SPF is weaker than the relay SPF. If you are  having issues with O365/Outlook/Hotmail try using -all rather than ~all', 'stop-wp-emails-going-to-spam' ); ?>
+                    </p>
             </tr>
             </tbody>
         </table>
