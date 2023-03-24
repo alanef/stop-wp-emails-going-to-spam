@@ -160,28 +160,6 @@ class Admin_Settings extends Admin_Pages {
                     </p>
                 </td>
             </tr>
-            <tr valign="top">
-                <th scope="row"><?php esc_html_e( 'Got a problem with inbound spam?', 'stop-wp-emails-going-to-spam' ); ?></th>
-                <td>
-                    <p>
-						<?php esc_html_e( 'If you want to block incoming comment spam, try this sister anti comment spam plugin - it is free.', 'stop-wp-emails-going-to-spam' ); ?>
-                    </p>
-                    <p>
-                        <a class="button-secondary" href="https://wordpress.org/plugins/fullworks-anti-spam/"
-                           target="_blank"><?php esc_html_e( 'FREE ANTI COMMENT SPAM', 'stop-wp-emails-going-to-spam' ); ?></a>
-                    </p>
-                    <p>
-						<?php esc_html_e( 'If your inbound spam is more serious and you need to stop spam on CF7, Gravity Forms, Wp Forms, WooCommerce, Registrations and more, grab a 14 day trial of my plugin, nothing to lose except spam.', 'stop-wp-emails-going-to-spam' ); ?>
-                    </p>
-                    <p>
-                        <a class="button-primary"
-                           href="https://checkout.freemius.com/mode/dialog/plugin/5065/plan/8158/?trial=paid"
-                           target="_blank"><?php esc_html_e( '14 DAY TRIAL - ANTI SPAM', 'stop-wp-emails-going-to-spam' ); ?></a>
-                        <a class="" href="https://fullworks.net/products/anti-spam/"
-                           target="_blank"><?php esc_html_e( 'Anti Spam product details', 'stop-wp-emails-going-to-spam' ); ?></a>
-                    </p>
-                </td>
-            </tr>
             </tbody>
         </table>
 		<?php
