@@ -2,7 +2,7 @@
 Contributors: alanfuller, fullworks
 Donate Link: https://www.buymeacoffee.com/wpdevalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
-Tested up to: 6.2
+Tested up to: 6.4
 Stable tag: 2.0.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
