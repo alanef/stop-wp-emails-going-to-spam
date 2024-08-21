@@ -13,12 +13,12 @@ var notify = require("gulp-notify");
 
 gulp.task( 'sync', function() {
     return gulp.src( '' )
-        .pipe(dirSync( 'src', 'dist', { printSummary: true } ))
+        .pipe(dirSync( 'stop-wp-emails-going-to-spam', 'dist', { printSummary: true } ))
         .on('error', gutil.log);
 } );
 
 gulp.task( 'translate', function () {
-    return gulp.src( ['src/**/*.php','!src/includes/vendor'])
+    return gulp.src( ['stop-wp-emails-going-to-spam/**/*.php','!stop-wp-emails-going-to-spam/includes/vendor'])
         .pipe(sort())
         .pipe(wpPot( {
             domain        : project,
@@ -64,12 +64,12 @@ gulp.task('clean', () => {
 
 gulp.task('sync', () => {
     return gulp.src('.', {allowEmpty: true})
-        .pipe(dirSync('src', 'dist', {printSummary: true}))
+        .pipe(dirSync('stop-wp-emails-going-to-spam', 'dist', {printSummary: true}))
         .on('error', gutil.log);
 });
 
 gulp.task('translate', () => {
-    return gulp.src(['src/**/*.php', '!src/{vendor,vendor/**}'])
+    return gulp.src(['stop-wp-emails-going-to-spam/**/*.php', '!stop-wp-emails-going-to-spam/{vendor,vendor/**}'])
         .pipe(sort())
         .pipe(wpPot({
             domain: project,

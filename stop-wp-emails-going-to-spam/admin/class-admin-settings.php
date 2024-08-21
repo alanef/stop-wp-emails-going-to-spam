@@ -20,7 +20,7 @@ class Admin_Settings extends Admin_Pages {
 	protected $settings_title;
 	protected $domain;
 	protected $options;
-	protected $donations;
+	protected $donation;
 
 	/**
 	 * Settings constructor.

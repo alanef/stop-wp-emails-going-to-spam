@@ -2,6 +2,6 @@
 dist/
 zipped/
 node_modules/
-src/includes/vendor/
-src/composer.lock
+stop-wp-emails-going-to-spam/includes/vendor/
+stop-wp-emails-going-to-spam/composer.lock
 package-lock.json
