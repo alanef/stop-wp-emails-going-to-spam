@@ -23,7 +23,7 @@ gulp.task('zip', (done) => {
         .pipe(rename(function (file) {
             file.dirname = `${project}/${file.dirname}`;
         }))
-        .pipe(zip(`${project}.-free.zip`))
+        .pipe(zip(`${project}-free.zip`))
         .pipe(gulp.dest('zipped'));
     done();
 });
