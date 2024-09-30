@@ -86,7 +86,7 @@ class Admin {
 		if ( 'admin' === $this->options['email'] ) {
 			return get_bloginfo( 'admin_email' );
 		}
-		if ( 'other' === $this->options['otheremailname'] ) {
+		if ( 'other' === $this->options['email'] ) {
 			return $this->options['otheremailname'];
 		}
 

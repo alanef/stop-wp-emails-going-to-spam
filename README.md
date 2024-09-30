@@ -4,8 +4,6 @@ Clone the repo
 
 run npm install
 
-in src  run composer to install vendor
+run composer update
 
 development is in /src
-
-to create a zip for release run gulp task build

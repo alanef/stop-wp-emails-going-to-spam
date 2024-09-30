@@ -1,0 +1,9 @@
+{
+  "plugins": ["./stop-wp-emails-going-to-spam"],
+  "port": 8740,
+  "testsPort": 8741,
+  "config": {
+    "WP_DEBUG_LOG": "/var/www/html/wp-content/debug.log",
+    "WP_FS__DEV_MODE": true
+  }
+}

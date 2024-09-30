@@ -20,12 +20,17 @@
     "plugindonations_lib": {
       "type": "vcs",
       "url": "https://github.com/alanef/plugindonation_lib"
+    },
+    "alanef/wp_autoloader": {
+      "type": "vcs",
+      "url": "https://github.com/alanef/wp_autoloader"
     }
   },
   "require": {
     "php": ">=5.6",
     "composer/installers": "v1.0.12",
     "alanef/plugindonation_lib": "dev-master",
+    "alanef/wp_autoloader": "dev-main",
     "ext-json": "*"
   }
 }

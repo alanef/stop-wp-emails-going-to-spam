@@ -10,11 +10,13 @@
     "gulp-sort": "latest",
     "gulp-util": "latest",
     "gulp-wp-pot": "latest",
-    "gulp-zip": "latest"
+    "gulp-zip": "latest",
+    "del": "6.1.1"
   },
   "name": "stop-wp-emails-going-to-spam-project",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

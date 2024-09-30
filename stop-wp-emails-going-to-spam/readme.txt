@@ -7,7 +7,7 @@ Stable tag: 2.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Emails generated from within WordPress often end up in your spam or junk folder, This plugin helps you sort that out. The default setting can often be enough to solve your problem.
+Fixes WordPress emails going to spam/junk folders. The default settings often resolve the issue.
 
 == Description ==
 

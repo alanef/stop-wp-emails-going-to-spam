@@ -1,66 +1,39 @@
-var project                 = 'stop-wp-emails-going-to-spam'; // Project Name.
+import gulp from 'gulp';
+import zip from 'gulp-zip';
+import del from 'del';
+import rename from 'gulp-rename';
+import gutil from 'gulp-util';
+import dirSync from 'gulp-directory-sync';
+const project = 'stop-wp-emails-going-to-spam'; // Project Name.
 
-var gulp = require('gulp');
-var zip = require('gulp-zip');
-var del = require('del');
-var rename = require('gulp-rename');
-var gutil = require('gulp-util');
-var dirSync = require( 'gulp-directory-sync' );
-var removeLines = require('gulp-remove-lines');
-var wpPot = require('gulp-wp-pot');
-var sort = require('gulp-sort');
-var notify = require("gulp-notify");
 
-gulp.task( 'sync', function() {
-    return gulp.src( '' )
-        .pipe(dirSync( 'stop-wp-emails-going-to-spam', 'dist', { printSummary: true } ))
-        .on('error', gutil.log);
-} );
+import { exec } from 'child_process';
 
-gulp.task( 'translate', function () {
-    return gulp.src( ['stop-wp-emails-going-to-spam/**/*.php','!stop-wp-emails-going-to-spam/includes/vendor'])
-        .pipe(sort())
-        .pipe(wpPot( {
-            domain        : project,
-            package       : project
-        } ))
-        .on('error', gutil.log)
-        .pipe(gulp.dest('dist/languages/'+project+'.pot'))
-        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) );
-
+gulp.task('translate', (cb) => {
+    exec(' wp i18n make-pot ./stop-wp-emails-going-to-spam  ./stop-wp-emails-going-to-spam/languages/stop-wp-emails-going-to-spam.pot --skip-audit --exclude=\'./vendor\'', (err, stdout, stderr) => {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
 });
+
 
 gulp.task('zip', (done) => {
     gulp.src('dist/**/*')
         .pipe(rename(function (file) {
-            file.dirname = project + '/' + file.dirname;
+            file.dirname = `${project}/${file.dirname}`;
         }))
-        .pipe(zip(project + '-free.zip'))
-        .pipe(gulp.dest('zipped'))
-    done()
+        .pipe(zip(`${project}.-free.zip`))
+        .pipe(gulp.dest('zipped'));
+    done();
 });
-
 
 
 gulp.task('clean', () => {
     return del([
-        'dist/**/sass/',
-        'dist/**/*.css.map',
-        'dist/composer.*',
-        'dist/includes/vendor/bin/',
-        'dist/includes/vendor/**/.git*',
-        'dist/includes/vendor/**/.git*',
-        'dist/includes/vendor/**/.travis.yml',
-        'dist/includes/vendor/**/.codeclimate.yml',
-        'dist/includes/vendor/**/composer.json',
-        'dist/includes/vendor/**/package.json',
-        'dist/includes/vendor/**/gulpfile.js',
-        'dist/includes/vendor/**/*.md',
-        'dist/includes/vendor/squizlabs',
-        'dist/includes/vendor/wp-coding-standards'
+        'dist/components'
     ]);
 });
-
 
 gulp.task('sync', () => {
     return gulp.src('.', {allowEmpty: true})
@@ -68,19 +41,10 @@ gulp.task('sync', () => {
         .on('error', gutil.log);
 });
 
-gulp.task('translate', () => {
-    return gulp.src(['stop-wp-emails-going-to-spam/**/*.php', '!stop-wp-emails-going-to-spam/{vendor,vendor/**}'])
-        .pipe(sort())
-        .pipe(wpPot({
-            domain: project,
-            package: project
-        }))
-        .on('error', gutil.log)
-        .pipe(gulp.dest('src/languages/' + project + '.pot'))
-        .pipe(gulp.dest('dist/languages/' + project + '.pot'))
-        .pipe(notify({message: 'TASK: "translate" Completed! 💯', onLast: true}));
 
-});
+gulp.task('build', gulp.series('sync', 'clean', 'zip'));
 
 
-gulp.task('build', gulp.series('sync', 'clean', 'translate', 'zip'));
+
+
+
