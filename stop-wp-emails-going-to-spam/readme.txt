@@ -3,7 +3,7 @@ Contributors: alanfuller, fullworks
 Donate Link: https://www.buymeacoffee.com/wpdevalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
 Tested up to: 6.6
-Stable tag: 2.0.7
+Stable tag: 2.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,7 +24,7 @@ Optionally this plugin allows you to change the name and email address of the de
 If you use an SMTP email plugin or use an API based transactional email plugin, this plugin will add no value; it is built to support the default PHP mailer only.
 
 = PHP 8.0 compatible =
-Tested on PHP 8
+Tested on PHP 8.3
 
 = Features Include =
 * Checks email SPF health
@@ -53,6 +53,9 @@ Once activated you will be taken to the settings page.  The default settings are
 This plugin is provided for free and any support is totally voluntary.
 
 == Changelog ==
+= 2.1 =
+* Fix issue when selecting other email
+
 = 2.0.7 =
 * Fix deprecation notice
 

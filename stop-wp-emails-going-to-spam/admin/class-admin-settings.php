@@ -136,7 +136,7 @@ class Admin_Settings extends Admin_Pages {
             <tbody>
 			<?php $this->donation->display(); ?>
             <tr valign="top">
-                <th scope="row"><?php _e( 'About this Plugin', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"><?php esc_html_e( 'About this Plugin', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
                     <h4>
 						<?php esc_html_e( 'This plugin tries to help you stop emails being sent to spam folders when sent from your WordPress website.', 'stop-wp-emails-going-to-spam' ); ?>
@@ -372,9 +372,9 @@ class Admin_Settings extends Admin_Pages {
 
 	public function meta_box_2() {
 		if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
-			$ip = $_SERVER['SERVER_ADDR'];
+			$ip = sanitize_text_field( wp_unslash( $_SERVER['SERVER_ADDR'] ) );
 		} else {
-			$ip = gethostbyname( $_SERVER['SERVER_NAME'] );
+			$ip = ( isset( $_SERVER['SERVER_NAME'] ) ) ? gethostbyname( sanitize_text_field( wp_unslash( $_SERVER['SERVER_NAME'] ) ) ) : '0.0.0.0';
 		}
 		if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
 			$ip4 = true;
@@ -419,13 +419,13 @@ class Admin_Settings extends Admin_Pages {
         <table class="form-table">
             <tbody>
             <tr valign="top">
-                <th scope="row"><?php _e( '', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"><?php esc_html_e( '', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
                     <p><?php esc_html_e( 'This section is for information only, if there are problems getting your IP or DNS use a third party tool' ) ?></p>
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row"><?php _e( 'Server Info', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"><?php esc_html_e( 'Server Info', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
 					<?php if ( $ip4 || $ip6 ) {
 						?>
@@ -455,21 +455,21 @@ class Admin_Settings extends Admin_Pages {
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="alternate"><?php _e( 'SPF Record', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"
+                    class="alternate"><?php esc_html_e( 'SPF Record', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
 					<?php
 					if ( ! $dns ) {
-						printf( esc_html__(
-							'%1$sCannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool%2$s',
-							'stop-wp-emails-going-to-spam' ),
-							'<p class="notice notice-error">', '</p>'
-						);
+						echo '<p class="notice notice-error">' .
+						     esc_html__( 'Cannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool', 'stop-wp-emails-going-to-spam' ) .
+						     '</p>';
 					} else {
 						if ( false == $spf ) {
-							printf( esc_html__(
-								'%1$sNo SPF record found for %2$s, the following SPF record is recommended',
-								'stop-wp-emails-going-to-spam' ),
-								'<p class="notice notice-error">', $this->domain );
+							echo '<p class="notice notice-error">' .
+							     esc_html__( 'No SPF record found for', 'stop-wp-emails-going-to-spam' ) .
+							     esc_html( $this->domain ) .
+							     '. ' .
+							     esc_html__( 'the following SPF record is recommended', 'stop-wp-emails-going-to-spam' );
 							echo ' <br><code>';
 							if ( $ip4 || $ip6 ) {
 								printf( ' v=spf1 +a +mx %s:%s ~all', ( $ip4 ) ? 'ip4' : 'ip6', esc_html( $ip ) );
@@ -479,36 +479,24 @@ class Admin_Settings extends Admin_Pages {
 							echo '</code>';
 							echo '</p>';
 						} else {
-							printf(
-							/* translators:  leave placeholders 'Current record SPF record for domain_name: <strong>spf_record</strong>' */
-								esc_html__(
-									'Current record SPF record for %1$s: %2$s%3$s%4$s',
-									'stop-wp-emails-going-to-spam' ), $domain, '<strong>', $spf, '</strong><br /><br />' );
-
+							esc_html_e( 'Current record SPF record for', 'stop-wp-emails-going-to-spam' );
+							echo ' ' . esc_html( $domain ) . ': <br /><strong><code>' . esc_html( $spf ) . '</code></strong><br /><br />';
 							if ( strpos( strtolower( $spf ), 'redirect=' ) ) {
-								printf(
-								/* translators:  leave placeholders - they are just html <p> tags  with styling classes */
-									esc_html__(
-										'%1$sThe SPF redirects to another domain, recommend you manually check the redirected SPF%2$s',
-										'stop-wp-emails-going-to-spam' ), '<p class="notice notice-success">', '</p>' );
+								echo '<p class="notice notice-warning">';
+								esc_html_e( 'The SPF redirects to another domain, recommend you manually check the redirected SPF', 'stop-wp-emails-going-to-spam' );
+								echo '</p>';
 							} elseif ( strpos( $spf, $ip ) ) {
-								printf(
-								/* translators:  leave placeholders - they are just html <p> tags  with styling classes */
-									esc_html__(
-										'%1$sGood!, this contains your server IP address%2$s',
-										'stop-wp-emails-going-to-spam' ), '<p class="notice notice-success">', '</p>' );
+								echo '<p class="notice notice-success">';
+								esc_html_e( 'Good!, this contains your server IP address', 'stop-wp-emails-going-to-spam' );
+								echo '</p>';
 							} elseif ( strpos( strtolower( $spf ), ' a ' ) || strpos( strtolower( $spf ), ' +a ' ) ) {
-								printf(
-								/* translators:  leave placeholders - they are just html <p> tags  with styling classes */
-									esc_html__(
-										'%1$sGood!, this contains an A record reference%2$s',
-										'stop-wp-emails-going-to-spam' ), '<p class="notice notice-success">', '</p>' );
+								echo '<p class="notice notice-success">';
+								esc_html_e( 'Good!, this contains an A record reference', 'stop-wp-emails-going-to-spam' );
+								echo '</p>';
 							} else {
-								printf(
-								/* translators:  leave placeholders - they are just html <p> tags  with styling classes */
-									esc_html__(
-										'%1$sRecommend you add +a to your SPF record%4$s',
-										'stop-wp-emails-going-to-spam' ), '<p class="notice notice-warning">', ( $ip4 ) ? 'ip4' : 'ip6', esc_html( $ip ), '</p>' );
+								echo '<p class="notice notice-warning">';
+								esc_html_e( 'Recommend you add +a to your SPF record', 'stop-wp-emails-going-to-spam' );
+								echo '</p>';
 							}
 						}
 					}
