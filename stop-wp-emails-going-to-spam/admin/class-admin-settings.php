@@ -196,7 +196,7 @@ class Admin_Settings extends Admin_Pages {
                                class="medium-text"
                                name="stop-wp-emails-going-to-spam-settings-1[emailname]"
                                id="stop-wp-emails-going-to-spam-settings-1[emailname]"
-                               value="<?php echo esc_attr( $this->options['emailname'] ) ?>">@<?php echo esc_html( str_ireplace( 'www.', '', parse_url( get_site_url(), PHP_URL_HOST ) ) ); ?>
+                               value="<?php echo esc_attr( $this->options['emailname'] ) ?>">@<?php echo esc_html( str_ireplace( 'www.', '', wp_parse_url( get_site_url(), PHP_URL_HOST ) ) ); ?>
                     </label>
                     <p>
 						<span class="description">
@@ -291,7 +291,7 @@ class Admin_Settings extends Admin_Pages {
                                class="medium-text"
                                name="stop-wp-emails-going-to-spam-settings-1[wordpressemail]"
                                id="stop-wp-emails-going-to-spam-settings-1[wordpressemail]"
-                               value="<?php echo esc_attr( $this->options['wordpressemail'] ) ?>">@<?php echo esc_html( str_ireplace( 'www.', '', parse_url( get_site_url(), PHP_URL_HOST ) ) ); ?>
+                               value="<?php echo esc_attr( $this->options['wordpressemail'] ) ?>">@<?php echo esc_html( str_ireplace( 'www.', '', wp_parse_url( get_site_url(), PHP_URL_HOST ) ) ); ?>
                         <br>
 						<?php esc_html_e( 'Tick and set an email name on your domain for the default email', 'stop-wp-emails-going-to-spam' ); ?>
                     </label>
@@ -419,7 +419,7 @@ class Admin_Settings extends Admin_Pages {
         <table class="form-table">
             <tbody>
             <tr valign="top">
-                <th scope="row"><?php esc_html_e( '', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row" class="alternate"></th>
                 <td>
                     <p><?php esc_html_e( 'This section is for information only, if there are problems getting your IP or DNS use a third party tool' ) ?></p>
                 </td>
@@ -449,14 +449,14 @@ class Admin_Settings extends Admin_Pages {
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row"><?php esc_html_e( 'Domain being checked', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"
+                    class="alternate"><?php esc_html_e( 'Domain being checked', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
                     <p><?php echo esc_html( $this->domain ); ?></p>
                 </td>
             </tr>
             <tr>
-                <th scope="row"
-                    class="alternate"><?php esc_html_e( 'SPF Record', 'stop-wp-emails-going-to-spam' ); ?></th>
+                <th scope="row"><?php esc_html_e( 'SPF Record', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>
 					<?php
 					if ( ! $dns ) {

@@ -71,7 +71,7 @@ class Core {
 			return substr( $this->options['otheremailname'], strpos( $this->options['otheremailname'], '@' ) + 1 );;
 		}
 
-		return esc_html( str_ireplace( 'www.', '', parse_url( get_site_url(), PHP_URL_HOST ) ) );
+		return esc_html( str_ireplace( 'www.', '', wp_parse_url( get_site_url(), PHP_URL_HOST ) ) );
 	}
 
 	/**
