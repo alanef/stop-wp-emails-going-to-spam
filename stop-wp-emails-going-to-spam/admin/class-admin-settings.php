@@ -50,9 +50,9 @@ class Admin_Settings extends Admin_Pages {
 	public function register_settings() {
 		/* Register our setting. */
 		register_setting(
-			'1',                         /* Option Group */
+			$this->option_group,                         /* Option Group */
 			'stop-wp-emails-going-to-spam-settings-1',                   /* Option Name */
-			'2'          /* Sanitize Callback */
+			array( $this, 'sanitize_settings_1' )          /* Sanitize Callback */
 		);
 
 
