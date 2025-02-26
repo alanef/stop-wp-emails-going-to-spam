@@ -50,27 +50,25 @@ class Admin_Settings extends Admin_Pages {
 	public function register_settings() {
 		/* Register our setting. */
 		register_setting(
-			$this->option_group,                         /* Option Group */
+			'1',                         /* Option Group */
 			'stop-wp-emails-going-to-spam-settings-1',                   /* Option Name */
-			array( $this, 'sanitize_settings_1' )          /* Sanitize Callback */
+			'2'          /* Sanitize Callback */
 		);
 
 
 		/* Add settings menu page */
-		// phpcs:ignore WordPress.PHPCS.Sniffs.CodeAnalysis.SettingSanitizationSniff -- Verified safe class method
 		$this->settings_page = add_submenu_page(
 			'stop-wp-emails-going-to-spam',
 			'Settings', /* Page Title */
 			'Settings',                       /* Menu Title */
 			'manage_options',                 /* Capability */
 			'stop-wp-emails-going-to-spam',                         /* Page Slug */
-			'astrig'          /* Settings Page Function Callback */
+			array( $this, 'settings_page' )          /* Settings Page Function Callback */
 		);
-       // phpcs:ignore WordPress.PHPCS.Sniffs.CodeAnalysis.SettingSanitizationSniff -- Verified safe class method
 		register_setting(
 			$this->option_group,                         /* Option Group */
 			"{$this->option_group}-reset",                   /* Option Name */
-			array( Admin_Settings::class, 'reset_sanitize' )          /* Sanitize Callback */
+			array( $this, 'reset_sanitize' )          /* Sanitize Callback */
 		);
 
 	}
