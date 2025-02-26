@@ -64,7 +64,7 @@ class Admin_Settings extends Admin_Pages {
 			'Settings',                       /* Menu Title */
 			'manage_options',                 /* Capability */
 			'stop-wp-emails-going-to-spam',                         /* Page Slug */
-			array( Admin_Settings::class, 'settings_page' )          /* Settings Page Function Callback */
+			'astrig'          /* Settings Page Function Callback */
 		);
        // phpcs:ignore WordPress.PHPCS.Sniffs.CodeAnalysis.SettingSanitizationSniff -- Verified safe class method
 		register_setting(
