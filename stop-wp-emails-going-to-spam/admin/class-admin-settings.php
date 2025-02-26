@@ -63,13 +63,13 @@ class Admin_Settings extends Admin_Pages {
 			'Settings',                       /* Menu Title */
 			'manage_options',                 /* Capability */
 			'stop-wp-emails-going-to-spam',                         /* Page Slug */
-			array( $this, 'settings_page' )          /* Settings Page Function Callback */
+			array( Admin_Settings::class, 'settings_page' )          /* Settings Page Function Callback */
 		);
 
 		register_setting(
 			$this->option_group,                         /* Option Group */
 			"{$this->option_group}-reset",                   /* Option Name */
-			array( $this, 'reset_sanitize' )          /* Sanitize Callback */
+			array( Admin_Settings::class, 'reset_sanitize' )          /* Sanitize Callback */
 		);
 
 	}
