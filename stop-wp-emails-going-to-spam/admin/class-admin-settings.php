@@ -57,6 +57,7 @@ class Admin_Settings extends Admin_Pages {
 
 
 		/* Add settings menu page */
+		// phpcs:ignore WordPress.PHPCS.Sniffs.CodeAnalysis.SettingSanitizationSniff -- Verified safe class method
 		$this->settings_page = add_submenu_page(
 			'stop-wp-emails-going-to-spam',
 			'Settings', /* Page Title */
@@ -65,7 +66,7 @@ class Admin_Settings extends Admin_Pages {
 			'stop-wp-emails-going-to-spam',                         /* Page Slug */
 			array( Admin_Settings::class, 'settings_page' )          /* Settings Page Function Callback */
 		);
-
+       // phpcs:ignore WordPress.PHPCS.Sniffs.CodeAnalysis.SettingSanitizationSniff -- Verified safe class method
 		register_setting(
 			$this->option_group,                         /* Option Group */
 			"{$this->option_group}-reset",                   /* Option Name */
