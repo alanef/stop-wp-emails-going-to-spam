@@ -15,7 +15,7 @@
  * Plugin Name:       Stop WP Emails Going to Spam
  * Plugin URI:        http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/
  * Description:       Fixes WordPress PHP-Mailer emails going to spam/junk folders. The default settings often resolve the issue.
- * Version:           2.1
+ * Version:           2.2
  * Author:            Alan Fuller
  * Author URI:        http://fullworks.net/
  * License:           GPL-3.0+
@@ -39,7 +39,7 @@ if (!defined('WPINC')) {
 }
 if (!function_exists('Stop_Wp_Emails_Going_To_Spam\run_Stop_Wp_Emails_Going_To_Spam')) {
     define('STOP_WP_EMAILS_GOING_TO_SPAM_PLUGIN_DIR', plugin_dir_path(__FILE__));
-    define('STOP_WP_EMAILS_GOING_TO_SPAM_PLUGIN_VERSION', '2.1');
+    define('STOP_WP_EMAILS_GOING_TO_SPAM_PLUGIN_VERSION', '2.2');
 
 // Include the autoloader so we can dynamically include the classes.
 	require_once STOP_WP_EMAILS_GOING_TO_SPAM_PLUGIN_DIR . 'includes/vendor/autoload.php';

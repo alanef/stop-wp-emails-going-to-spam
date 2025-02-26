@@ -1,9 +1,9 @@
 === Stop WP Emails Going to Spam ===
 Contributors: alanfuller, fullworks
-Donate Link: https://www.buymeacoffee.com/wpdevalan
+Donate Link: https://ko-fi.com/wpalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
-Tested up to: 6.6
-Stable tag: 2.1
+Tested up to: 6.7
+Stable tag: 2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,55 +53,4 @@ Once activated you will be taken to the settings page.  The default settings are
 This plugin is provided for free and any support is totally voluntary.
 
 == Changelog ==
-= 2.1 =
-* Fix issue when selecting other email
-
-= 2.0.7 =
-* Fix deprecation notice
-
-= 2.0.6 =
-* library update
-
-= 2.0.5 =
-* Correct server IP detection
-
-= 2.0.4 =
-* add buy me a coffee donation option
-
-= 2.0.3 =
-* update donation library
-
-= 2.0.2 =
-* stop settings link showing twice
-
-= 2.0.1 =
-* Improve donation process
-
-= 2.0.0 == 2.0.0 =
-* Add IP blacklist check
-* Remove Freemius
-* Add donation link
-
-= 1.1.6 =
-* Correct display output in settings when SPF redirect to another domain
-
-= 1.1.5 =
-* Removed deactivation survey
-
-= 1.1.4 =
-* Library Update
-
-= 1.1.3 =
-* Move support off menu to settings
-
-= 1.1.2 =
-* Minor Fix
-
-= 1.1.1 =
-* Minor Fix
-
-= 1.1 =
-* Ensure default settings work on multisite
-
-= 1.0 =
-* First Release
+[Change log](https://fullworksplugins.com/docs/stop-wp-emails-going-to-spam/usage-stop-wp-emails-going-to-spam/change-log-2/)

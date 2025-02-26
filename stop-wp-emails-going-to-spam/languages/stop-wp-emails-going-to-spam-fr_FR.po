@@ -4,257 +4,252 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Stop WP Emails Going to Spam 2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/stop-wp-emails-going-to-spam\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2025-02-26T19:06:20+00:00\n"
+"PO-Revision-Date: 2025-02-26 19:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-26T19:49:56+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: Poedit 3.5\n"
 "X-Domain: stop-wp-emails-going-to-spam\n"
 
 #. Plugin Name of the plugin
-#: stop-wp-emails-going-to-spam.php
-#: admin/class-admin-settings.php:39
+#: stop-wp-emails-going-to-spam.php admin/class-admin-settings.php:39
 msgid "Stop WP Emails Going to Spam"
-msgstr ""
+msgstr "Empêcher les courriers électroniques de WP d'être envoyés au courrier indésirable"
 
 #. Plugin URI of the plugin
 #: stop-wp-emails-going-to-spam.php
 msgid "http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/"
-msgstr ""
+msgstr "http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/"
 
 #. Description of the plugin
 #: stop-wp-emails-going-to-spam.php
 msgid "Fixes WordPress PHP-Mailer emails going to spam/junk folders. The default settings often resolve the issue."
-msgstr ""
+msgstr "Corrige les emails de WordPress PHP-Mailer qui vont dans les dossiers spam/junk. Les réglages par défaut permettent souvent de résoudre le problème."
 
 #. Author of the plugin
 #: stop-wp-emails-going-to-spam.php
 msgid "Alan Fuller"
-msgstr ""
+msgstr "Alan Fuller"
 
 #. Author URI of the plugin
 #: stop-wp-emails-going-to-spam.php
 msgid "http://fullworks.net/"
-msgstr ""
+msgstr "http://fullworks.net/"
 
 #: admin/class-admin-pages.php:77
 msgid "Are you sure want to do this?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir le faire?"
 
 #: admin/class-admin-pages.php:163
 msgid "Save Options"
-msgstr ""
+msgstr "Sauvegarder les options"
 
 #: admin/class-admin-pages.php:187
 msgid "Save"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: admin/class-admin-pages.php:198
 msgid "Settings reset to defaults."
-msgstr ""
+msgstr "Réglages remis aux valeurs par défaut."
 
 #: admin/class-admin-settings.php:104
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: admin/class-admin-settings.php:112
 msgid "Sending Health Check"
-msgstr ""
+msgstr "Envoi du bilan de santé"
 
 #: admin/class-admin-settings.php:120
 msgid "Envelope Sender"
-msgstr ""
+msgstr "Expéditeur d'enveloppes"
 
 #: admin/class-admin-settings.php:136
 msgid "About this Plugin"
-msgstr ""
+msgstr "A propos de ce plugin"
 
 #: admin/class-admin-settings.php:139
 msgid "This plugin tries to help you stop emails being sent to spam folders when sent from your WordPress website."
-msgstr ""
+msgstr "Ce plugin a pour but de vous aider à empêcher l'envoi de courriels vers des dossiers de spam lorsqu'ils sont envoyés depuis votre site web WordPress."
 
 #: admin/class-admin-settings.php:142
 msgid "When using the default PHP mailer on shared hosts WordPress does not correctly set the \"envelope sender\"."
-msgstr ""
+msgstr "Lors de l'utilisation du mailer PHP par défaut sur des hôtes partagés, WordPress ne définit pas correctement l'\"expéditeur de l'enveloppe\"."
 
 #: admin/class-admin-settings.php:145
 msgid "Use the settings to select the email that you want as the \"envelope sender\"."
-msgstr ""
+msgstr "Utilisez les paramètres pour sélectionner l'e-mail que vous souhaitez utiliser comme \"expéditeur de l'enveloppe\"."
 
 #: admin/class-admin-settings.php:148
 msgid "For best results the \"envelope sender\" domain should have a SPF record, see the SPF section, and the email address should exist."
-msgstr ""
+msgstr "Pour de meilleurs résultats, le domaine de l'expéditeur de l'enveloppe doit avoir un enregistrement SPF (voir la section SPF) et l'adresse électronique doit exister."
 
 #: admin/class-admin-settings.php:151
 msgid "This plugin will only set the \"envelope sender\" if other plugins have not."
-msgstr ""
+msgstr "Ce plugin ne définira l'\"expéditeur de l'enveloppe\" que si d'autres plugins ne l'ont pas fait."
 
 #: admin/class-admin-settings.php:155
 msgid "You do not need this plugin if you are using an SMTP email plugin or using an API based / transactional email solution"
-msgstr ""
+msgstr "Vous n'avez pas besoin de ce plugin si vous utilisez un plugin d'email SMTP ou une solution d'email transactionnel basée sur une API"
 
 #: admin/class-admin-settings.php:168
 msgid "This sets envelope sender of the message, if not set by another program. This will usually be turned into a Return-Path header by the receiver, and is the address that bounces will be sent to."
-msgstr ""
+msgstr "Ceci définit l'enveloppe de l'expéditeur du message, si elle n'a pas été définie par un autre programme. Cette adresse sera généralement transformée en en-tête Return-Path par le destinataire, et c'est l'adresse à laquelle les rebonds seront envoyés."
 
 #: admin/class-admin-settings.php:173
 msgid "Use Admin Email"
-msgstr ""
+msgstr "Utiliser l'e-mail de l'administrateur"
 
 #: admin/class-admin-settings.php:184
 msgid "Use another Domain email"
-msgstr ""
+msgstr "Utiliser un autre domaine e-mail"
 
 #. translators:  leave the @%s  as in noreply@%s
 #: admin/class-admin-settings.php:202
 msgid "You can use an email like noreply@%s, but make sure the email account exists."
-msgstr ""
+msgstr "Vous pouvez utiliser un e-mail comme noreply@%s, mais assurez-vous que le compte e-mail existe."
 
 #: admin/class-admin-settings.php:216
 msgid "Use another email"
-msgstr ""
+msgstr "Utiliser un autre courriel"
 
 #: admin/class-admin-settings.php:230
 msgid "You can use another fully qualified email, but make sure the email account exists and the domain has correct SPF set up. No point using gmail or outlook or domains you don't own as you will never make it work"
-msgstr ""
+msgstr "Vous pouvez utiliser un autre email pleinement qualifié, mais assurez-vous que le compte email existe et que le domaine a un SPF correct. Il est inutile d'utiliser gmail ou outlook ou des domaines que vous ne possédez pas, car cela ne fonctionnera jamais"
 
 #: admin/class-admin-settings.php:235
 msgid "From Address"
-msgstr ""
+msgstr "Depuis l'adresse"
 
 #: admin/class-admin-settings.php:238
 msgid "Set the relationship between From address and Envelope address"
-msgstr ""
+msgstr "Définir la relation entre l'adresse de départ et l'adresse de l'enveloppe"
 
 #: admin/class-admin-settings.php:245
 msgid "Tick to set the From to the same as Envelope (above) recommended"
-msgstr ""
+msgstr "Cochez cette case pour définir l'option De la même manière que pour l'enveloppe (ci-dessus)"
 
 #: admin/class-admin-settings.php:252
 msgid "Tick to set the Envelope to the From, not recommended unless all your forms use a From address of your domain, however the SPF check below is ignored"
-msgstr ""
+msgstr "Cochez cette case pour définir l'enveloppe à l'adresse From, ce qui n'est pas recommandé à moins que tous vos formulaires utilisent une adresse From de votre domaine, mais la vérification SPF ci-dessous est ignorée"
 
 #: admin/class-admin-settings.php:259
 msgid "Tick to leave the From address alone - this may raise warnings in email clients when different from Envelope, not generally recommended"
-msgstr ""
+msgstr "Cochez cette case pour ne pas modifier l'adresse \"From\" - cela peut provoquer des avertissements dans les clients de messagerie si elle est différente de l'enveloppe, ce qui n'est généralement pas recommandé"
 
 #: admin/class-admin-settings.php:264
 msgid "WordPress default mail address"
-msgstr ""
+msgstr "Adresse e-mail par défaut de WordPress"
 
 #. translators:  leave &lt;wordpress@%s&gt;
 #: admin/class-admin-settings.php:270
 msgid "WordPress default system messages come from an account WordPress &lt;wordpress@%s&gt;  you can control that with the following settings"
-msgstr ""
+msgstr "Les messages système par défaut de WordPress proviennent d'un compte WordPress &lt;wordpress@%s&gt; vous pouvez contrôler cela avec les paramètres suivants"
 
 #: admin/class-admin-settings.php:279
 msgid "Tick to set the WP default to the same as the email set above - recommended"
-msgstr ""
+msgstr "Cochez cette case pour que la valeur par défaut de WP soit la même que l'email défini ci-dessus - recommandé"
 
 #: admin/class-admin-settings.php:293
 msgid "Tick and set an email name on your domain for the default email"
-msgstr ""
+msgstr "Cochez et définissez un nom d'email sur votre domaine pour l'email par défaut"
 
 #: admin/class-admin-settings.php:298
 msgid "WordPress default name"
-msgstr ""
+msgstr "Nom par défaut de WordPress"
 
 #: admin/class-admin-settings.php:306
 msgid "You can change the display name associated with the default WordPress email, this is cosmetic only"
-msgstr ""
+msgstr "Vous pouvez modifier le nom d'affichage associé à l'adresse e-mail par défaut de WordPress, ceci est uniquement cosmétique"
 
-#: admin/class-admin-settings.php:330
-#: admin/class-admin-settings.php:336
+#: admin/class-admin-settings.php:330 admin/class-admin-settings.php:336
 msgid "Invalid email for Envelope"
-msgstr ""
+msgstr "Courriel non valide pour l'enveloppe"
 
 #: admin/class-admin-settings.php:346
 msgid "Invalid email for WordPress default"
-msgstr ""
-
-#: admin/class-admin-settings.php:421
-msgid "This section is for information only, if there are problems getting your IP or DNS use a third party tool"
-msgstr ""
+msgstr "Courriel invalide pour WordPress par défaut"
 
 #: admin/class-admin-settings.php:425
 msgid "Server Info"
-msgstr ""
+msgstr "Info serveur"
 
 #: admin/class-admin-settings.php:430
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: admin/class-admin-settings.php:430
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: admin/class-admin-settings.php:434
 msgid "Cannot identify a valid IP address - you may want to check with your hosting company"
-msgstr ""
+msgstr "Impossible d'identifier une adresse IP valide - vous pouvez vérifier auprès de votre hébergeur"
 
 #: admin/class-admin-settings.php:439
 msgid "Your IP appears in one or more spam blacklists"
-msgstr ""
+msgstr "Votre adresse IP figure sur une ou plusieurs listes noires de spam"
 
 #: admin/class-admin-settings.php:441
 msgid "spam blacklists"
-msgstr ""
+msgstr "listes noires de spam"
 
 #: admin/class-admin-settings.php:441
 msgid "you may want to talk to your host to resolve your IP reputation"
-msgstr ""
+msgstr "vous pouvez vous adresser à votre hébergeur pour résoudre votre problème de réputation IP"
 
 #: admin/class-admin-settings.php:450
 msgid "Domain being checked"
-msgstr ""
+msgstr "Domaine en cours de vérification"
 
 #: admin/class-admin-settings.php:456
 msgid "SPF Record"
-msgstr ""
+msgstr "Enregistrement SPF"
 
 #: admin/class-admin-settings.php:461
-msgid "Cannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool"
-msgstr ""
+msgid "Cannot get DNS records - refresh this page - si vous obtenez toujours ce message après plusieurs actualisations, vous pouvez vérifier le panneau de contrôle DNS de votre domaine ou utiliser un outil tiers"
+msgstr "Impossible d'obtenir les enregistrements DNS - actualisez cette page - si vous obtenez toujours ce message après plusieurs actualisations, vous pouvez vérifier le panneau de contrôle DNS de votre domaine ou utiliser un outil tiers"
 
 #: admin/class-admin-settings.php:466
 msgid "No SPF record found for"
-msgstr ""
+msgstr "Aucun enregistrement SPF n'a été trouvé pour"
 
 #: admin/class-admin-settings.php:469
 msgid "the following SPF record is recommended"
-msgstr ""
+msgstr "l'enregistrement SPF suivant est recommandé"
 
 #: admin/class-admin-settings.php:479
 msgid "Current record SPF record for"
-msgstr ""
+msgstr "Enregistrement actuel Enregistrement SPF pour"
 
 #: admin/class-admin-settings.php:483
 msgid "The SPF redirects to another domain, recommend you manually check the redirected SPF"
-msgstr ""
+msgstr "Le SPF est redirigé vers un autre domaine, il est recommandé de vérifier manuellement le SPF redirigé"
 
 #: admin/class-admin-settings.php:487
 msgid "Good!, this contains your server IP address"
-msgstr ""
+msgstr "Bon !, ceci contient l'adresse IP de votre serveur"
 
 #: admin/class-admin-settings.php:491
 msgid "Good!, this contains an A record reference"
-msgstr ""
+msgstr "Bon !, ceci contient une référence d'enregistrement A"
 
 #: admin/class-admin-settings.php:495
 msgid "Recommend you add +a to your SPF record"
-msgstr ""
+msgstr "Nous vous recommandons d'ajouter +a à votre enregistrement SPF"
 
 #: admin/class-admin-settings.php:502
 msgid "Note about ~all.  ~all is a soft fail and is normally used,  however some services relay emails and O365 does not like it if the originating SPF is weaker than the relay SPF. If you are  having issues with O365/Outlook/Hotmail try using -all rather than ~all"
-msgstr ""
+msgstr "Note à propos de ~all.  ~all est un échec en douceur et est normalement utilisé, cependant certains services relaient les emails et O365 n'aime pas que le SPF d'origine soit plus faible que le SPF de relais. Si vous avez des problèmes avec O365/Outlook/Hotmail, essayez d'utiliser -all plutôt que ~all"
 
 #: admin/class-admin.php:53
 msgid "Settings"
-msgstr ""
+msgstr "Réglages"
 
 #: stop-wp-emails-going-to-spam.php:79
 msgid "Cannot execute as the plugin already exists"
-msgstr ""
+msgstr "Exécution impossible car le plugin existe déjà"

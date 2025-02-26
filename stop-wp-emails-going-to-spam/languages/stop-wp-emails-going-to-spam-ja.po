@@ -1,0 +1,334 @@
+# Copyright (C) 2025 Alan Fuller
+# This file is distributed under the GPL-3.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Stop WP Emails Going to Spam 2.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/stop-wp-emails-"
+"going-to-spam\n"
+"POT-Creation-Date: 2025-02-26T19:49:56+00:00\n"
+"PO-Revision-Date: 2025-02-26 20:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: stop-wp-emails-going-to-spam\n"
+
+#. Plugin Name of the plugin
+#: stop-wp-emails-going-to-spam.php admin/class-admin-settings.php:39
+msgid "Stop WP Emails Going to Spam"
+msgstr "WordPressメールのスパム分類防止"
+
+#. Plugin URI of the plugin
+#: stop-wp-emails-going-to-spam.php
+msgid "http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/"
+msgstr "http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/"
+
+#. Description of the plugin
+#: stop-wp-emails-going-to-spam.php
+msgid ""
+"Fixes WordPress PHP-Mailer emails going to spam/junk folders. The default "
+"settings often resolve the issue."
+msgstr ""
+"WordPressのPHPメーラーから送信されたメールがスパム/迷惑フォルダに入る問題を修"
+"正します。多くの場合デフォルト設定で解決できます。"
+
+#. Author of the plugin
+#: stop-wp-emails-going-to-spam.php
+msgid "Alan Fuller"
+msgstr "アラン・フラー"
+
+#. Author URI of the plugin
+#: stop-wp-emails-going-to-spam.php
+msgid "http://fullworks.net/"
+msgstr "http://fullworks.net/"
+
+#: admin/class-admin-pages.php:77
+msgid "Are you sure want to do this?"
+msgstr "本当に実行しますか？"
+
+#: admin/class-admin-pages.php:163
+msgid "Save Options"
+msgstr "設定を保存"
+
+#: admin/class-admin-pages.php:187
+msgid "Save"
+msgstr "保存"
+
+#: admin/class-admin-pages.php:198
+msgid "Settings reset to defaults."
+msgstr "設定を初期値にリセットしました"
+
+#: admin/class-admin-settings.php:104
+msgid "Information"
+msgstr "情報"
+
+#: admin/class-admin-settings.php:112
+msgid "Sending Health Check"
+msgstr "送信ヘルスチェック"
+
+#: admin/class-admin-settings.php:120
+msgid "Envelope Sender"
+msgstr "エンベロープ送信者"
+
+#: admin/class-admin-settings.php:136
+msgid "About this Plugin"
+msgstr "このプラグインについて"
+
+#: admin/class-admin-settings.php:139
+msgid ""
+"This plugin tries to help you stop emails being sent to spam folders when "
+"sent from your WordPress website."
+msgstr ""
+"WordPressサイトから送信されるメールがスパムフォルダに分類されないよう支援しま"
+"す。"
+
+#: admin/class-admin-settings.php:142
+msgid ""
+"When using the default PHP mailer on shared hosts WordPress does not "
+"correctly set the \"envelope sender\"."
+msgstr ""
+"共有ホスト環境でPHPメーラーを使用する場合、WordPressは「エンベロープ送信者」を"
+"正しく設定しません。"
+
+#: admin/class-admin-settings.php:145
+msgid ""
+"Use the settings to select the email that you want as the \"envelope sender\"."
+msgstr ""
+"「エンベロープ送信者」として使用するメールアドレスを設定で選択できます。"
+
+#: admin/class-admin-settings.php:148
+msgid ""
+"For best results the \"envelope sender\" domain should have a SPF record, see "
+"the SPF section, and the email address should exist."
+msgstr ""
+"最適な結果を得るには、「エンベロープ送信者」ドメインにSPFレコードの設定が必要"
+"です（SPFセクション参照）。またメールアドレスは実在する必要があります。"
+
+#: admin/class-admin-settings.php:151
+msgid ""
+"This plugin will only set the \"envelope sender\" if other plugins have not."
+msgstr ""
+"他のプラグインが設定していない場合のみ、エンベロープ送信者を設定します。"
+
+#: admin/class-admin-settings.php:155
+msgid ""
+"You do not need this plugin if you are using an SMTP email plugin or using an "
+"API based / transactional email solution"
+msgstr ""
+"SMTPメールプラグインやAPIベース/トランザクションメールサービスを使用している場"
+"合、本プラグインは不要です。"
+
+#: admin/class-admin-settings.php:168
+msgid ""
+"This sets envelope sender of the message, if not set by another program. This "
+"will usually be turned into a Return-Path header by the receiver, and is the "
+"address that bounces will be sent to."
+msgstr ""
+"他のプログラムで設定されていない場合のメッセージのエンベロープ送信者を設定しま"
+"す。通常、受信側でReturn-Pathヘッダーに変換され、バウンスメールの送信先となり"
+"ます。"
+
+#: admin/class-admin-settings.php:173
+msgid "Use Admin Email"
+msgstr "管理者メールを使用"
+
+#: admin/class-admin-settings.php:184
+msgid "Use another Domain email"
+msgstr "別ドメインのメールを使用"
+
+#. translators:  leave the @%s  as in noreply@%s
+#: admin/class-admin-settings.php:202
+msgid ""
+"You can use an email like noreply@%s, but make sure the email account exists."
+msgstr ""
+"noreply@%s のようなメールアドレスを使用可能ですが、アカウントが存在することを"
+"確認してください。"
+
+#: admin/class-admin-settings.php:216
+msgid "Use another email"
+msgstr "その他のメールを使用"
+
+#: admin/class-admin-settings.php:230
+msgid ""
+"You can use another fully qualified email, but make sure the email account "
+"exists and the domain has correct SPF set up. No point using gmail or outlook "
+"or domains you don't own as you will never make it work"
+msgstr ""
+"完全修飾メールアドレスを使用可能ですが、アカウントの実在とドメインの適切なSPF"
+"設定が必須です。GmailやOutlook、所有していないドメインの使用は機能しないため推"
+"奨しません。"
+
+#: admin/class-admin-settings.php:235
+msgid "From Address"
+msgstr "送信元アドレス"
+
+#: admin/class-admin-settings.php:238
+msgid "Set the relationship between From address and Envelope address"
+msgstr "送信元アドレスとエンベロープアドレスの関係を設定"
+
+#: admin/class-admin-settings.php:245
+msgid "Tick to set the From to the same as Envelope (above) recommended"
+msgstr "エンベロープアドレスと送信元を同一にする（推奨）"
+
+#: admin/class-admin-settings.php:252
+msgid ""
+"Tick to set the Envelope to the From, not recommended unless all your forms "
+"use a From address of your domain, however the SPF check below is ignored"
+msgstr ""
+"エンベロープを送信元アドレスに設定（全てのフォームで自ドメインの送信元を使用す"
+"る場合以外は非推奨、SPFチェックは無視されます）"
+
+#: admin/class-admin-settings.php:259
+msgid ""
+"Tick to leave the From address alone - this may raise warnings in email "
+"clients when different from Envelope, not generally recommended"
+msgstr ""
+"送信元アドレスを変更しない（エンベロープと異なる場合、メールクライアントで警告"
+"が発生する可能性あり、非推奨）"
+
+#: admin/class-admin-settings.php:264
+msgid "WordPress default mail address"
+msgstr "WordPressデフォルトメールアドレス"
+
+#. translators:  leave &lt;wordpress@%s&gt;
+#: admin/class-admin-settings.php:270
+msgid ""
+"WordPress default system messages come from an account WordPress &lt;"
+"wordpress@%s&gt;  you can control that with the following settings"
+msgstr ""
+"WordPressのシステムメッセージは通常 WordPress &lt;wordpress@%s&gt; から送信さ"
+"れます。以下の設定で変更可能です。"
+
+#: admin/class-admin-settings.php:279
+msgid ""
+"Tick to set the WP default to the same as the email set above - recommended"
+msgstr "WordPressデフォルトを上記メールアドレスに設定（推奨）"
+
+#: admin/class-admin-settings.php:293
+msgid "Tick and set an email name on your domain for the default email"
+msgstr "デフォルトメール用にドメイン上のメール名を設定"
+
+#: admin/class-admin-settings.php:298
+msgid "WordPress default name"
+msgstr "WordPressデフォルト名"
+
+#: admin/class-admin-settings.php:306
+msgid ""
+"You can change the display name associated with the default WordPress email, "
+"this is cosmetic only"
+msgstr "WordPressデフォルトメールの表示名を変更可能（表示上の変更のみ）"
+
+#: admin/class-admin-settings.php:330 admin/class-admin-settings.php:336
+msgid "Invalid email for Envelope"
+msgstr "エンベロープ用メールアドレスが無効です"
+
+#: admin/class-admin-settings.php:346
+msgid "Invalid email for WordPress default"
+msgstr "WordPressデフォルトメールが無効です"
+
+#: admin/class-admin-settings.php:421
+msgid ""
+"This section is for information only, if there are problems getting your IP "
+"or DNS use a third party tool"
+msgstr ""
+"※情報提供のみを目的としたセクションです。IP/DNS情報の取得に問題がある場合は第"
+"三者ツールをご利用ください"
+
+#: admin/class-admin-settings.php:425
+msgid "Server Info"
+msgstr "サーバー情報"
+
+#: admin/class-admin-settings.php:430
+msgid "IPv4"
+msgstr "IPv4"
+
+#: admin/class-admin-settings.php:430
+msgid "IPv6"
+msgstr "IPv6"
+
+#: admin/class-admin-settings.php:434
+msgid ""
+"Cannot identify a valid IP address - you may want to check with your hosting "
+"company"
+msgstr "有効なIPアドレスを確認できません - ホスティング会社にご確認ください"
+
+#: admin/class-admin-settings.php:439
+msgid "Your IP appears in one or more spam blacklists"
+msgstr "IPアドレスがスパムブラックリストに登録されています"
+
+#: admin/class-admin-settings.php:441
+msgid "spam blacklists"
+msgstr "スパムブラックリスト"
+
+#: admin/class-admin-settings.php:441
+msgid "you may want to talk to your host to resolve your IP reputation"
+msgstr "IP評価を改善するためホスティングプロバイダにご相談ください"
+
+#: admin/class-admin-settings.php:450
+msgid "Domain being checked"
+msgstr "確認中のドメイン"
+
+#: admin/class-admin-settings.php:456
+msgid "SPF Record"
+msgstr "SPFレコード"
+
+#: admin/class-admin-settings.php:461
+msgid ""
+"Cannot get DNS records - refresh this page - if you still get this message "
+"after a few refreshes you may want to check your domain DNS control panel or "
+"check via a third part tool"
+msgstr ""
+"DNSレコードを取得できません - ページを更新してください。数回更新しても表示され"
+"る場合は、DNS管理パネルまたは第三者ツールで確認してください"
+
+#: admin/class-admin-settings.php:466
+msgid "No SPF record found for"
+msgstr "次のSPFレコードが見つかりません:"
+
+#: admin/class-admin-settings.php:469
+msgid "the following SPF record is recommended"
+msgstr "次のSPFレコード設定を推奨します:"
+
+#: admin/class-admin-settings.php:479
+msgid "Current record SPF record for"
+msgstr "現在のSPFレコード:"
+
+#: admin/class-admin-settings.php:483
+msgid ""
+"The SPF redirects to another domain, recommend you manually check the "
+"redirected SPF"
+msgstr "SPFが別ドメインにリダイレクトされています。手動での確認を推奨します"
+
+#: admin/class-admin-settings.php:487
+msgid "Good!, this contains your server IP address"
+msgstr "良好！ サーバーIPアドレスが含まれています"
+
+#: admin/class-admin-settings.php:491
+msgid "Good!, this contains an A record reference"
+msgstr "良好！ Aレコード参照が含まれています"
+
+#: admin/class-admin-settings.php:495
+msgid "Recommend you add +a to your SPF record"
+msgstr "SPFレコードに+aを追加することを推奨します"
+
+#: admin/class-admin-settings.php:502
+msgid ""
+"Note about ~all.  ~all is a soft fail and is normally used,  however some "
+"services relay emails and O365 does not like it if the originating SPF is "
+"weaker than the relay SPF. If you are  having issues with O365/Outlook/"
+"Hotmail try using -all rather than ~all"
+msgstr ""
+"~allに関する注意: ~allはソフトフェールで通常使用されますが、メールリレーサービ"
+"スを使用する場合、発信元SPFがリレーSPFより弱いとO365で問題が発生する可能性があ"
+"ります。O365/Outlook/Hotmailで問題がある場合は~allではなく-allをお試しください"
+
+#: admin/class-admin.php:53
+msgid "Settings"
+msgstr "設定"
+
+#: stop-wp-emails-going-to-spam.php:79
+msgid "Cannot execute as the plugin already exists"
+msgstr "プラグインが既に存在するため実行できません"

@@ -19,13 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
-
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
 
@@ -43,14 +36,13 @@ jobs:
 
       - name: Run phpcs suit
         run: composer run-script check
-      - name: Add vendor
-        run: composer update
 
+      - name: Composer install for load-html-files
+        run: composer install -d  stop-wp-emails-going-to-spam --no-dev
       - name: Run plugin check
         uses: wordpress/plugin-check-action@v1
         with:
-          build-dir: './dist'
+          build-dir: './stop-wp-emails-going-to-spam'
           exclude-directories: |
             'includes/vendor'
-          exclude-checks: |
-            plugin_header_text_domain
+          

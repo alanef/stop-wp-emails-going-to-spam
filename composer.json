@@ -12,8 +12,15 @@
     }
   },
   "scripts": {
-    "post-update-cmd": [ "composer update -d stop-wp-emails-going-to-spam",
-                         "npx gulp build" ],
+    "post-update-cmd": ["composer update -d stop-wp-emails-going-to-spam",
+      "wp i18n make-pot ./stop-wp-emails-going-to-spam  ./stop-wp-emails-going-to-spam/languages/stop-wp-emails-going-to-spam.pot --skip-audit --exclude='./vendor'"
+    ],
+    "build": [
+      "rm -rf zipped",
+      "@composer install -d stop-wp-emails-going-to-spam --no-dev",
+      "mkdir -p zipped",
+      "zip -r zipped/stop-wp-emails-going-to-spam-free.zip stop-wp-emails-going-to-spam"
+    ],
     "phpcs": "phpcs stop-wp-emails-going-to-spam -s --standard=phpcs_sec.xml --ignore=*/vendor/*  --extensions=php",
     "compat:8.3": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.3",
     "compat:8.2": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.2",
