@@ -40,7 +40,7 @@ class Admin_Settings extends Admin_Pages {
 		new \Fullworks_Free_Plugin_Lib\Main('stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
 			admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
 			'SWEGTS-Free',
-			'html_files_page_load-html-files-settings',
+			'settings_page_stop-user-enumeration',
 			$this->settings_title);
 
 

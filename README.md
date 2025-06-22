@@ -6,4 +6,4 @@ run npm install
 
 run composer update
 
-development is in /src
+development is in /src  .
