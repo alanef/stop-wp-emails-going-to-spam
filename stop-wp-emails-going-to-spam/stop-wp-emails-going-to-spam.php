@@ -1,32 +1,18 @@
 <?php
-
-/**
- *
- *
- *
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
- *
- * Plugin Name:       Stop WP Emails Going to Spam
- * Plugin URI:        http://fullworks.net/wordpress-plugins/stop-wp-emails-going-to-spam/
- * Description:       Fixes WordPress PHP-Mailer emails going to spam/junk folders. The default settings often resolve the issue.
- * Version:           2.2
- * Author:            Alan Fuller
- * Author URI:        http://fullworks.net/
- * License:           GPL-3.0+
- * Requires at least: 4.8.1
- * Requires PHP: 7.4
- * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       stop-wp-emails-going-to-spam
- * Domain Path:       /languages
- *
- * @package stop-wp-emails-going-to-spam
- */
+/*
+Plugin Name: Stop WP Emails Going to Spam
+Plugin URI: https://fullworksplugins.com/products/stop-wp-emails-going-to-spam/
+Description: Fixes WordPress PHP-Mailer emails going to spam/junk folders. The default settings often resolve the issue.
+Version: 2.2
+Author: Alan Fuller
+Requires at least: 4.8.1
+Requires PHP: 7.4
+Text Domain: stop-wp-emails-going-to-spam
+Domain Path: /languages
+Author URI: https://fullworksplugins.com/
+License: GPL-3.0+
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+*/
 
 namespace Stop_Wp_Emails_Going_To_Spam;
 
