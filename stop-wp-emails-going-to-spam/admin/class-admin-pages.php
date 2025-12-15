@@ -115,6 +115,7 @@ class Admin_Pages {
 		if ( $this->settings_page_id == $hook_suffix ) {
 
 			/* enable add_meta_boxes function in this page. */
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- this is valid use
 			do_action( $this->settings_page_id . '_settings_page_boxes', $hook_suffix );
 			?>
             <div class="wrap">

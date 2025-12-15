@@ -129,7 +129,9 @@ class Admin_Settings extends Admin_Pages {
 		?>
         <table class="form-table">
             <tbody>
-			<?php do_action('ffpl_ad_display'); ?>
+			<?php
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- this is a hook name of third party lib
+            do_action('ffpl_ad_display'); ?>
             <tr valign="top">
                 <th scope="row"><?php esc_html_e( 'About this Plugin', 'stop-wp-emails-going-to-spam' ); ?></th>
                 <td>

@@ -60,7 +60,7 @@ class Core {
 		$this->domain = $this->get_domain();
 
 		$this->loader = new Loader();
-		$this->set_locale();
+
 		$this->settings_pages();
 		$this->define_admin_hooks();;
 
@@ -74,22 +74,7 @@ class Core {
 		return esc_html( str_ireplace( 'www.', '', wp_parse_url( get_site_url(), PHP_URL_HOST ) ) );
 	}
 
-	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function set_locale() {
 
-		$plugin_i18n = new i18n();
-
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
-	}
 
 	/**
 	 * Register all of the hooks related to the admin settings area functionality
