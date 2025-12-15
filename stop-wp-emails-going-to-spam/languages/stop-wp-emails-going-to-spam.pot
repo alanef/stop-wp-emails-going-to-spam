@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-26T19:49:56+00:00\n"
+"POT-Creation-Date: 2025-12-15T11:31:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: stop-wp-emails-going-to-spam\n"
@@ -56,198 +56,198 @@ msgstr ""
 msgid "Settings reset to defaults."
 msgstr ""
 
-#: admin/class-admin-settings.php:104
+#: admin/class-admin-settings.php:103
 msgid "Information"
 msgstr ""
 
-#: admin/class-admin-settings.php:112
+#: admin/class-admin-settings.php:111
 msgid "Sending Health Check"
 msgstr ""
 
-#: admin/class-admin-settings.php:120
+#: admin/class-admin-settings.php:119
 msgid "Envelope Sender"
 msgstr ""
 
-#: admin/class-admin-settings.php:136
+#: admin/class-admin-settings.php:135
 msgid "About this Plugin"
 msgstr ""
 
-#: admin/class-admin-settings.php:139
+#: admin/class-admin-settings.php:138
 msgid "This plugin tries to help you stop emails being sent to spam folders when sent from your WordPress website."
 msgstr ""
 
-#: admin/class-admin-settings.php:142
+#: admin/class-admin-settings.php:141
 msgid "When using the default PHP mailer on shared hosts WordPress does not correctly set the \"envelope sender\"."
 msgstr ""
 
-#: admin/class-admin-settings.php:145
+#: admin/class-admin-settings.php:144
 msgid "Use the settings to select the email that you want as the \"envelope sender\"."
 msgstr ""
 
-#: admin/class-admin-settings.php:148
+#: admin/class-admin-settings.php:147
 msgid "For best results the \"envelope sender\" domain should have a SPF record, see the SPF section, and the email address should exist."
 msgstr ""
 
-#: admin/class-admin-settings.php:151
+#: admin/class-admin-settings.php:150
 msgid "This plugin will only set the \"envelope sender\" if other plugins have not."
 msgstr ""
 
-#: admin/class-admin-settings.php:155
+#: admin/class-admin-settings.php:154
 msgid "You do not need this plugin if you are using an SMTP email plugin or using an API based / transactional email solution"
 msgstr ""
 
-#: admin/class-admin-settings.php:168
+#: admin/class-admin-settings.php:167
 msgid "This sets envelope sender of the message, if not set by another program. This will usually be turned into a Return-Path header by the receiver, and is the address that bounces will be sent to."
 msgstr ""
 
-#: admin/class-admin-settings.php:173
+#: admin/class-admin-settings.php:172
 msgid "Use Admin Email"
 msgstr ""
 
-#: admin/class-admin-settings.php:184
+#: admin/class-admin-settings.php:183
 msgid "Use another Domain email"
 msgstr ""
 
 #. translators:  leave the @%s  as in noreply@%s
-#: admin/class-admin-settings.php:202
+#: admin/class-admin-settings.php:201
 msgid "You can use an email like noreply@%s, but make sure the email account exists."
 msgstr ""
 
-#: admin/class-admin-settings.php:216
+#: admin/class-admin-settings.php:215
 msgid "Use another email"
 msgstr ""
 
-#: admin/class-admin-settings.php:230
+#: admin/class-admin-settings.php:229
 msgid "You can use another fully qualified email, but make sure the email account exists and the domain has correct SPF set up. No point using gmail or outlook or domains you don't own as you will never make it work"
 msgstr ""
 
-#: admin/class-admin-settings.php:235
+#: admin/class-admin-settings.php:234
 msgid "From Address"
 msgstr ""
 
-#: admin/class-admin-settings.php:238
+#: admin/class-admin-settings.php:237
 msgid "Set the relationship between From address and Envelope address"
 msgstr ""
 
-#: admin/class-admin-settings.php:245
+#: admin/class-admin-settings.php:244
 msgid "Tick to set the From to the same as Envelope (above) recommended"
 msgstr ""
 
-#: admin/class-admin-settings.php:252
+#: admin/class-admin-settings.php:251
 msgid "Tick to set the Envelope to the From, not recommended unless all your forms use a From address of your domain, however the SPF check below is ignored"
 msgstr ""
 
-#: admin/class-admin-settings.php:259
+#: admin/class-admin-settings.php:258
 msgid "Tick to leave the From address alone - this may raise warnings in email clients when different from Envelope, not generally recommended"
 msgstr ""
 
-#: admin/class-admin-settings.php:264
+#: admin/class-admin-settings.php:263
 msgid "WordPress default mail address"
 msgstr ""
 
 #. translators:  leave &lt;wordpress@%s&gt;
-#: admin/class-admin-settings.php:270
+#: admin/class-admin-settings.php:269
 msgid "WordPress default system messages come from an account WordPress &lt;wordpress@%s&gt;  you can control that with the following settings"
 msgstr ""
 
-#: admin/class-admin-settings.php:279
+#: admin/class-admin-settings.php:278
 msgid "Tick to set the WP default to the same as the email set above - recommended"
 msgstr ""
 
-#: admin/class-admin-settings.php:293
+#: admin/class-admin-settings.php:292
 msgid "Tick and set an email name on your domain for the default email"
 msgstr ""
 
-#: admin/class-admin-settings.php:298
+#: admin/class-admin-settings.php:297
 msgid "WordPress default name"
 msgstr ""
 
-#: admin/class-admin-settings.php:306
+#: admin/class-admin-settings.php:305
 msgid "You can change the display name associated with the default WordPress email, this is cosmetic only"
 msgstr ""
 
-#: admin/class-admin-settings.php:330
-#: admin/class-admin-settings.php:336
+#: admin/class-admin-settings.php:329
+#: admin/class-admin-settings.php:335
 msgid "Invalid email for Envelope"
 msgstr ""
 
-#: admin/class-admin-settings.php:346
+#: admin/class-admin-settings.php:345
 msgid "Invalid email for WordPress default"
 msgstr ""
 
-#: admin/class-admin-settings.php:421
+#: admin/class-admin-settings.php:420
 msgid "This section is for information only, if there are problems getting your IP or DNS use a third party tool"
 msgstr ""
 
-#: admin/class-admin-settings.php:425
+#: admin/class-admin-settings.php:424
 msgid "Server Info"
 msgstr ""
 
-#: admin/class-admin-settings.php:430
+#: admin/class-admin-settings.php:429
 msgid "IPv4"
 msgstr ""
 
-#: admin/class-admin-settings.php:430
+#: admin/class-admin-settings.php:429
 msgid "IPv6"
 msgstr ""
 
-#: admin/class-admin-settings.php:434
+#: admin/class-admin-settings.php:433
 msgid "Cannot identify a valid IP address - you may want to check with your hosting company"
 msgstr ""
 
-#: admin/class-admin-settings.php:439
+#: admin/class-admin-settings.php:438
 msgid "Your IP appears in one or more spam blacklists"
 msgstr ""
 
-#: admin/class-admin-settings.php:441
+#: admin/class-admin-settings.php:440
 msgid "spam blacklists"
 msgstr ""
 
-#: admin/class-admin-settings.php:441
+#: admin/class-admin-settings.php:440
 msgid "you may want to talk to your host to resolve your IP reputation"
 msgstr ""
 
-#: admin/class-admin-settings.php:450
+#: admin/class-admin-settings.php:449
 msgid "Domain being checked"
 msgstr ""
 
-#: admin/class-admin-settings.php:456
+#: admin/class-admin-settings.php:455
 msgid "SPF Record"
 msgstr ""
 
-#: admin/class-admin-settings.php:461
+#: admin/class-admin-settings.php:460
 msgid "Cannot get DNS records - refresh this page - if you still get this message after a few refreshes you may want to check your domain DNS control panel or check via a third part tool"
 msgstr ""
 
-#: admin/class-admin-settings.php:466
+#: admin/class-admin-settings.php:465
 msgid "No SPF record found for"
 msgstr ""
 
-#: admin/class-admin-settings.php:469
+#: admin/class-admin-settings.php:468
 msgid "the following SPF record is recommended"
 msgstr ""
 
-#: admin/class-admin-settings.php:479
+#: admin/class-admin-settings.php:478
 msgid "Current record SPF record for"
 msgstr ""
 
-#: admin/class-admin-settings.php:483
+#: admin/class-admin-settings.php:482
 msgid "The SPF redirects to another domain, recommend you manually check the redirected SPF"
 msgstr ""
 
-#: admin/class-admin-settings.php:487
+#: admin/class-admin-settings.php:486
 msgid "Good!, this contains your server IP address"
 msgstr ""
 
-#: admin/class-admin-settings.php:491
+#: admin/class-admin-settings.php:490
 msgid "Good!, this contains an A record reference"
 msgstr ""
 
-#: admin/class-admin-settings.php:495
+#: admin/class-admin-settings.php:494
 msgid "Recommend you add +a to your SPF record"
 msgstr ""
 
-#: admin/class-admin-settings.php:502
+#: admin/class-admin-settings.php:501
 msgid "Note about ~all.  ~all is a soft fail and is normally used,  however some services relay emails and O365 does not like it if the originating SPF is weaker than the relay SPF. If you are  having issues with O365/Outlook/Hotmail try using -all rather than ~all"
 msgstr ""
 

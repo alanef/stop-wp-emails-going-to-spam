@@ -1,5 +1,6 @@
 {
   "plugins": ["./stop-wp-emails-going-to-spam"],
+  "phpVersion": "8.4",
   "port": 8740,
   "testsPort": 8741,
   "config": {

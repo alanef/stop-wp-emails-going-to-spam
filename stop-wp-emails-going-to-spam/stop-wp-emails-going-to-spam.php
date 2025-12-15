@@ -20,7 +20,7 @@
  * Author URI:        http://fullworks.net/
  * License:           GPL-3.0+
  * Requires at least: 4.8.1
- * Requires PHP: 5.6
+ * Requires PHP: 7.4
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       stop-wp-emails-going-to-spam
  * Domain Path:       /languages
@@ -65,7 +65,12 @@ if (!function_exists('Stop_Wp_Emails_Going_To_Spam\run_Stop_Wp_Emails_Going_To_S
 	     */
 	    register_uninstall_hook(__FILE__, array('\Stop_Wp_Emails_Going_To_Spam\Includes\Uninstall', 'uninstall'));
 	    ;
-
+	    new \Fullworks_Free_Plugin_Lib\Main('stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
+		    admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
+		    'SWEGTS',
+		    'stop-wp-emails-going-to-spam-settings',
+		    'Stop WP Emails Going to Spam'
+	    );
         /**
          * The core plugin class that is used to define internationalization,
          * admin-specific hooks, and public-facing site hooks.

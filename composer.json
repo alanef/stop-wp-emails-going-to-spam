@@ -16,19 +16,19 @@
       "wp i18n make-pot ./stop-wp-emails-going-to-spam  ./stop-wp-emails-going-to-spam/languages/stop-wp-emails-going-to-spam.pot --skip-audit --exclude='./vendor'"
     ],
     "build": [
-      "rm -rf zipped",
-      "@composer install -d stop-wp-emails-going-to-spam --no-dev",
+      "cd stop-wp-emails-going-to-spam && composer install --no-dev",
       "mkdir -p zipped",
-      "zip -r zipped/stop-wp-emails-going-to-spam-free.zip stop-wp-emails-going-to-spam"
+      "wp dist-archive stop-wp-emails-going-to-spam zipped/stop-wp-emails-going-to-spam-free.zip --force"
     ],
     "phpcs": "phpcs stop-wp-emails-going-to-spam -s --standard=phpcs_sec.xml --ignore=*/vendor/*  --extensions=php",
+    "compat:8.4": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.4",
     "compat:8.3": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.3",
     "compat:8.2": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.2",
     "compat:8.1": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.1",
     "compat:8.0": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.0",
     "compat:7.4": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 7.4",
-    "compat:5.6": "./vendor/bin/phpcs stop-wp-emails-going-to-spam -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 5.6",
     "check": [
+      "@compat:8.4",
       "@compat:8.3",
       "@compat:8.2",
       "@compat:8.1",

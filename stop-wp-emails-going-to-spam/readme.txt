@@ -2,7 +2,7 @@
 Contributors: alanfuller, fullworks
 Donate Link: https://ko-fi.com/wpalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -24,7 +24,7 @@ Optionally this plugin allows you to change the name and email address of the de
 If you use an SMTP email plugin or use an API based transactional email plugin, this plugin will add no value; it is built to support the default PHP mailer only.
 
 = PHP 8.0 compatible =
-Tested on PHP 8.3
+Tested on PHP 8.4
 
 = Features Include =
 * Checks email SPF health

@@ -36,15 +36,14 @@ class Admin_Settings extends Admin_Pages {
 		$this->options     = $options;
 
 
-		$this->settings_title = esc_html__( 'Stop WP Emails Going to Spam', 'stop-wp-emails-going-to-spam' );
-		new \Fullworks_Free_Plugin_Lib\Main('stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
-			admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
-			'SWEGTS-Free',
-			'settings_page_stop-user-enumeration',
-			$this->settings_title);
 
 
 		parent::__construct();
+	}
+
+	public function settings_setup() {
+		$this->settings_title = esc_html__( 'Stop WP Emails Going to Spam', 'stop-wp-emails-going-to-spam' );
+		parent::settings_setup();
 	}
 
 	public function register_settings() {
