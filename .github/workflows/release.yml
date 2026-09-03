@@ -39,7 +39,23 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Install WP-CLI dist-archive command
-        run: wp package install wp-cli/dist-archive-command
+        env:
+          # WP-CLI bundles Composer 2.2, whose github-oauth validation rejects
+          # the runner's GITHUB_TOKEN format ("contains invalid characters").
+          # setup-php persists that token in auth.json, so strip the persisted
+          # github-oauth from every composer home (default + wp-cli's own).
+          # Installing anonymously instead is flaky: shared runner IPs exhaust
+          # GitHub's unauthenticated API limit ("Could not authenticate against
+          # github.com"). So hand the same token back as http-basic, which
+          # Composer 2.2 accepts without the format check.
+          GITHUB_TOKEN: ""
+          COMPOSER_AUTH: '{"http-basic":{"github.com":{"username":"x-access-token","password":"${{ github.token }}"}}}'
+        run: |
+          composer config --global --unset github-oauth.github.com 2>/dev/null || true
+          rm -f "$HOME/.composer/auth.json" \
+                "$HOME/.config/composer/auth.json" \
+                "$HOME/.wp-cli/packages/auth.json" 2>/dev/null || true
+          wp package install wp-cli/dist-archive-command:v3.1.0
 
       - name: Build plugin for release
         run: composer run-script build
@@ -50,6 +66,9 @@ jobs:
           VERSION=$(grep "Version:" stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
           echo "Building version $VERSION"
+
+      - name: Name the release zip
+        run: cp zipped/stop-wp-emails-going-to-spam-free.zip "zipped/stop-wp-emails-going-to-spam-${{ steps.get_version.outputs.VERSION }}.zip"
 
       - name: Verify tag matches plugin version
         run: |
@@ -70,7 +89,7 @@ jobs:
           echo "Tag version matches plugin version: $PLUGIN_VERSION"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref }}
           name: Release ${{ steps.get_version.outputs.VERSION }}
@@ -86,7 +105,7 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./zipped/stop-wp-emails-going-to-spam-free.zip#stop-wp-emails-going-to-spam-${{ steps.get_version.outputs.VERSION }}.zip
+            zipped/stop-wp-emails-going-to-spam-${{ steps.get_version.outputs.VERSION }}.zip
 
       - name: Deploy to WordPress.org
         env:
