@@ -1,27 +1,20 @@
 {
-  "devDependencies": {
-    "del": "latest",
-    "gulp": "latest",
-    "gulp-directory-sync": "latest",
-    "gulp-freemius-deploy": "^1.0.11",
-    "gulp-notify": "latest",
-    "gulp-remove-lines": "latest",
-    "gulp-rename": "latest",
-    "gulp-sort": "latest",
-    "gulp-util": "latest",
-    "gulp-wp-pot": "latest",
-    "gulp-zip": "latest",
-    "del": "6.1.1"
-  },
   "name": "stop-wp-emails-going-to-spam-project",
-  "version": "2.2.1",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "version": "1.0.0",
+  "private": true,
+  "description": "Development project for the Stop WP Emails Going to Spam WordPress plugin",
   "author": "Alan Fuller <alan@fullworks.net>",
-  "license": "GPL",
-  "description": ""
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "wp-env": "wp-env",
+    "start": "wp-env start",
+    "stop": "wp-env stop",
+    "destroy": "wp-env destroy",
+    "test": "./run-tests.sh",
+    "test:unit": "./run-tests.sh",
+    "build": "composer run-script build"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.25.0"
+  }
 }
