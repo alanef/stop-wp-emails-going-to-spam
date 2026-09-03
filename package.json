@@ -14,7 +14,7 @@
     "del": "6.1.1"
   },
   "name": "stop-wp-emails-going-to-spam-project",
-  "version": "1.0.0",
+  "version": "2.2.1",
   "main": "index.js",
   "type": "module",
   "scripts": {

@@ -1,4 +1,4 @@
-= 2.2 =
+= 2.2.2 =
 * update opt-in library
 
 = 2.2 =
