@@ -9,6 +9,7 @@ tmp-build/
 node_modules/
 /vendor/
 /stop-wp-emails-going-to-spam/vendor/
+/stop-wp-emails-going-to-spam/composer.lock
 /stop-wp-emails-going-to-spam/includes/vendor/
 .phpunit.result.cache
 *.phpunit.result.cache
