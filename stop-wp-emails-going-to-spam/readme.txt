@@ -52,5 +52,9 @@ Once activated you will be taken to the settings page.  The default settings are
 
 This plugin is provided for free and any support is totally voluntary.
 
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/9e5fbc97-6c43-4d11-a8cb-74b381d31205)
+
 == Changelog ==
 [Change log](https://fullworksplugins.com/docs/stop-wp-emails-going-to-spam/usage-stop-wp-emails-going-to-spam/change-log-2/)
