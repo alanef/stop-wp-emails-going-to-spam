@@ -43,7 +43,7 @@ All must hold, otherwise stop:
   Otherwise re-run `$P/scripts/release/run-tests-and-mark.sh $V`. If the marker shows
   PHPUnit `SKIPPED`, say so to the user when asking for confirmation.
 - `$P/.sdlc/releases/$V/DEPENDENCY_AUDIT.md` exists (from `scripts/release/check-dependencies.sh`).
-- The latest Plugin Check run on `main` is for HEAD and succeeded:
+- The latest `checks.yml` run on `main` is for HEAD and succeeded:
   `gh run list -R alanef/stop-wp-emails-going-to-spam --workflow checks.yml --branch main --limit 1 --json headSha,status,conclusion`
   shows `headSha` = HEAD, `completed`, `success`.
 
@@ -110,12 +110,29 @@ If `$KEY` is empty, skip this step and say so: no `.env.youtrack` `YOUTRACK_PROJ
 Issues in the release: the `Issues Included` table in `.sdlc/releases/$V/RELEASE_NOTES.md`,
 else ids at the start of commit subjects in range
 (`git -C $P log --format=%s $PREV..$TAG | grep -oE "^$KEY-[0-9]+" | sort -u`), not body
-mentions. For each:
+mentions.
 
-- Stage: `Deployed`
-- Comment: `Released in $V`, with the GitHub release link
-  (`https://github.com/alanef/stop-wp-emails-going-to-spam/releases/tag/$TAG`) and, for anything user-visible, one line
-  on what changed.
+Decide per issue whether it shipped plugin code: list the paths its commits in range touch,
+and check whether any is inside `stop-wp-emails-going-to-spam/`. Decide by path, never by commit subject:
+
+```bash
+ID=<issue id>   # \b keeps QPP-6 from matching QPP-61
+for c in $(git -C $P log --format=%H --grep="^$ID\b" -E $PREV..$TAG); do
+  git -C $P diff-tree --no-commit-id --name-only -r $c
+done | grep -q '^stop-wp-emails-going-to-spam/' && echo shipped || echo non-shipping
+```
+
+For each issue:
+
+- Stage: `Deployed`, **only if it shipped plugin code**. An issue whose commits in range touch
+  only paths outside `stop-wp-emails-going-to-spam/` (tests, tooling, marketing, docs) keeps its Stage as it is.
+- Resolution: `Done`, if the issue is not already resolved.
+- Fix versions: `$V`, only if that version already exists in the project's Fix versions
+  bundle (check the field schema with `get_issue_fields_schema`). If it does not, say so in
+  the report and leave the field alone; never create the version.
+- Comment, on every issue in range including non-shipping ones: `Released in $V`, with the
+  GitHub release link (`https://github.com/alanef/stop-wp-emails-going-to-spam/releases/tag/$TAG`) and, for anything
+  user-visible, one line on what changed.
 
 ## Tell the user what is still manual
 
