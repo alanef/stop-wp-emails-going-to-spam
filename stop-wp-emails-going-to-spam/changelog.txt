@@ -1,3 +1,6 @@
+= Unreleased =
+* Added: FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
+
 = 2.2.2 =
 * update opt-in library
 
