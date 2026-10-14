@@ -18,6 +18,8 @@ TAG=v$V          # this repo's tag style (pin "tag_prefix" in .tooling.json)
 PREV=$(git -C $P tag -l | grep -E '^v?[0-9]+(\.[0-9]+)+$' | awk '{t=$0; sub(/^v/,"",t); print t" "$0}' | sort -V | tail -1 | cut -d' ' -f2)
 KEY=$(grep -oP '^YOUTRACK_PROJECT=["'\'']?\K[A-Za-z0-9_]+' $P/.env.youtrack 2>/dev/null)
 KEY=${KEY:-}   # empty: YouTrack step is skipped with a note
+KB=""             # KB changelog page: the changelog_url pin, else the readme's link
+KB=${KB:-$(grep -m1 -oE 'https://fullworksplugins\.com/docs/[^ )"<>]*change-log[^ )"<>]*' $P/stop-wp-emails-going-to-spam/readme.txt)}
 ```
 
 Check `git -C $P remote get-url origin` names `alanef/stop-wp-emails-going-to-spam` before going on.
@@ -43,6 +45,15 @@ All must hold, otherwise stop:
   Otherwise re-run `$P/scripts/release/run-tests-and-mark.sh $V`. If the marker shows
   PHPUnit `SKIPPED`, say so to the user when asking for confirmation.
 - `$P/.sdlc/releases/$V/DEPENDENCY_AUDIT.md` exists (from `scripts/release/check-dependencies.sh`).
+- **KB changelog page.** If `$KB` is empty the plugin has no KB changelog page; note
+  "no KB changelog page" and go on. If `$KB` is set, `$P/.env.wordpress` must exist and set
+  both `WP_POST_ID` and `CHANGELOG_FILE`:
+  `grep -qE '^(export )?WP_POST_ID=.+' $P/.env.wordpress && grep -qE '^(export )?CHANGELOG_FILE=.+' $P/.env.wordpress`.
+  If not, **stop** and tell the user, on its own line:
+  `CHANGELOG PAGE WILL NOT BE UPDATED: no .env.wordpress (page: $KB)` (or name the missing
+  key). The file is gitignored and is lost when a repo is re-cloned or moved; a release
+  without it ships with a stale public changelog. Continue only on an explicit yes that
+  accepts this, and remember it for the final report.
 - The latest `checks.yml` run on `main` is for HEAD and succeeded:
   `gh run list -R alanef/stop-wp-emails-going-to-spam --workflow checks.yml --branch main --limit 1 --json headSha,status,conclusion`
   shows `headSha` = HEAD, `completed`, `success`.
@@ -92,15 +103,28 @@ confirm it. That is expected; see the manual steps.
 ## Publish the changelog
 
 `update-changelog.sh` is on PATH from dev_scripts. It reads `.env.wordpress` in the
-project root (gitignored: site, credentials, KB post id, `CHANGELOG_FILE`) and finds
-`stop-wp-emails-going-to-spam/changelog.txt` itself. Only some plugins have that file.
+project root (gitignored: site, credentials, `WP_POST_ID`, `CHANGELOG_FILE`) and publishes
+`stop-wp-emails-going-to-spam/changelog.txt` to the KB page `$KB`.
 
-```bash
-if [ -f $P/.env.wordpress ]; then (cd $P && update-changelog.sh); else echo "no .env.wordpress: KB changelog not published for this plugin"; fi
+- `$KB` empty: no KB changelog page. Note "no KB changelog page" and go on; nothing to warn.
+- `$KB` set and `.env.wordpress` complete (as checked in the preconditions):
+
+  ```bash
+  (cd $P && update-changelog.sh); echo "exit $?"
+  curl -s "$KB" | grep -c "Version $V"     # must be at least 1
+  ```
+
+- `$KB` set but the user accepted, at the preconditions, releasing without `.env.wordpress`:
+  do not run it.
+
+If the publish was skipped, exited non-zero, or the page does not show `Version $V`, the
+final report MUST carry a separate, prominent line, never folded into a summary:
+
+```
+CHANGELOG PAGE NOT UPDATED: <reason: no .env.wordpress / missing WP_POST_ID / update-changelog.sh exit N / page does not show Version $V>, page $KB
 ```
 
-A non-zero exit means the KB update failed. The release has already shipped, so report it
-and carry on to YouTrack; do not re-tag or re-run the release.
+The release has already shipped, so carry on to YouTrack; do not re-tag or re-run the release.
 
 ## YouTrack
 
@@ -143,4 +167,4 @@ Always end with these, explicitly:
   page. Until then the directory still serves `$PREV`.
 - Any server side follow-ups recorded in the release notes.
 
-Then report: tag, release.yml run, what was confirmed, changelog result, YouTrack updates.
+Then report: tag, release.yml run, what was confirmed, changelog result, YouTrack updates. Put any `CHANGELOG PAGE NOT UPDATED` line on its own, first.
