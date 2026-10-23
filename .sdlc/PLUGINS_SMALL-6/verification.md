@@ -2,7 +2,7 @@
 
 **Issue:** free_plugin_lib: setup notice can't be dismissed and never goes away (all free plugins)
 **Date:** 2026-10-23
-**Commit:** 85c1e9d; free_plugin_lib v1.3.3 (4f34052)
+**Commit:** 85c1e9d..8c033ab; free_plugin_lib v1.3.3 (4f34052)
 
 ## Executive Summary
 
@@ -35,13 +35,18 @@ constraint to `^1.3.3`, adds changelog bullets, and adds one line to `includes/c
 All test options and user meta were reset afterwards.
 
 ## Commit Range Covered
-**Commit range covered:** `85c1e9d..85c1e9d`
+**Commit range covered:** `85c1e9d..8c033ab`
 
 | SHA | Subject |
 |-----|---------|
 | 85c1e9d | Take free_plugin_lib 1.3.3 (PLUGINS_SMALL-6, PLUGINS_SMALL-7) |
+| 8c033ab | Declare PHP 7.4 in composer.json, matching the library |
 
-No out-of-range commits.
+8c033ab carries no issue ID. It follows from this rollout: the library requires PHP 7.4 or later, and Alan decided
+plugins must declare 7.4. It changes only `"php"` in the plugin directory's composer.json, and the plugin header
+already said `Requires PHP: 7.4`. Checked on it: `composer run check` clean, `npm test` OK (3 tests), checks.yml run
+39921312162 with both jobs success, and the tests-passed marker re-run on it. Release 3ae25e8 precedes it, and the
+marker now names the later commit. No other out-of-range commits.
 
 ---
 Verified by: AI Assistant
