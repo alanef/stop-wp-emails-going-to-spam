@@ -44,13 +44,7 @@ if (!function_exists('Stop_Wp_Emails_Going_To_Spam\run_Stop_Wp_Emails_Going_To_S
 	    register_activation_hook(__FILE__, array('\Stop_Wp_Emails_Going_To_Spam\Includes\Activator', 'activate'));
 
 
-
-	    /**
-	     * The code that runs during plugin uninstall.
-	     * This action is documented in includes/class-uninstall.php
-	     */
-	    register_uninstall_hook(__FILE__, array('\Stop_Wp_Emails_Going_To_Spam\Includes\Uninstall', 'uninstall'));
-	    ;
+	    // Uninstall is handled by uninstall.php.
 	    new \Fullworks_Free_Plugin_Lib\Main('stop-wp-emails-going-to-spam/stop-wp-emails-going-to-spam.php',
 		    admin_url( 'options-general.php?page=stop-wp-emails-going-to-spam-settings' ),
 		    'SWEGTS',
