@@ -1,4 +1,4 @@
-= Unreleased =
+= 2.2.3 =
 * Added: FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
 * Fixed: the settings notice could not be dismissed and kept coming back on every page load
 * Fixed: on sites running other Fullworks free plugins, the opt-in notice and menu could belong to the wrong plugin

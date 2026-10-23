@@ -3,7 +3,7 @@ Contributors: alanfuller, fullworks
 Donate Link: https://ko-fi.com/wpalan
 Tags: email, spam, envelope sender, phpmail, phpmailer
 Tested up to: 7.1
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 Type: free
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

@@ -1,6 +1,6 @@
 {
   "name": "stop-wp-emails-going-to-spam-project",
-  "version": "1.0.0",
+  "version": "2.2.3",
   "private": true,
   "description": "Development project for the Stop WP Emails Going to Spam WordPress plugin",
   "author": "Alan Fuller <alan@fullworks.net>",
