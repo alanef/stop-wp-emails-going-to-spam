@@ -17,6 +17,7 @@ class Uninstall {
 	 */
 	public static function uninstall() {
         delete_option('stop-wp-emails-going-to-spam-settings-1');
+        \Fullworks_Free_Plugin_Lib\Main::plugin_uninstall( 'SWEGTS' );
 	}
 
 }
